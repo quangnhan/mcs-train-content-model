@@ -1,0 +1,69 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.egg-info/
+.Python
+build/
+dist/
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Evaluation / experiment artifacts
+evaluation/.deepeval
+.deepeval*
+results/
+wandb/
+mlruns/
+outputs/
+checkpoints/
+runs/
+
+# Model / data artifacts
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.gguf
+*.h5
+
+# Large data files
+*.csv
+*.tsv
+*.parquet
+*.arrow
+*.feather
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Logs
+*.log
+logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
