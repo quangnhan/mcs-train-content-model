@@ -3,6 +3,7 @@
 Cùng định nghĩa: Faithfulness + Expansion + Marketing Vibe + run_batch.
 Notebook chỉ cần tạo `JudgeLLM(client, model_id)` rồi gọi `run_batch(cases, judge_llm)`.
 """
+
 from __future__ import annotations
 
 import json
@@ -116,7 +117,9 @@ class FaithfulnessResult:
     combined_score: float = 0.0
 
     def __post_init__(self):
-        self.combined_score = 0.5 * self.rule_entity_score + 0.5 * self.llm_faithfulness_score
+        self.combined_score = (
+            0.5 * self.rule_entity_score + 0.5 * self.llm_faithfulness_score
+        )
 
 
 class FaithfulnessEvaluator:
@@ -125,7 +128,9 @@ class FaithfulnessEvaluator:
             threshold=0.5, model=judge_llm, async_mode=False, verbose_mode=False
         )
 
-    def evaluate_one(self, input_title: str, seed_content: str, actual_output: str) -> FaithfulnessResult:
+    def evaluate_one(
+        self, input_title: str, seed_content: str, actual_output: str
+    ) -> FaithfulnessResult:
         rule_score, rule_detail = entity_presence_score(seed_content, actual_output)
         case = LLMTestCase(
             input=input_title,
@@ -184,7 +189,9 @@ class ExpansionQualityEvaluator:
             return 0.4
         return 0.1
 
-    def evaluate_one(self, input_title: str, seed_content: str, actual_output: str) -> ExpansionResult:
+    def evaluate_one(
+        self, input_title: str, seed_content: str, actual_output: str
+    ) -> ExpansionResult:
         case = LLMTestCase(
             input=input_title,
             actual_output=actual_output,
@@ -266,15 +273,26 @@ Trả về JSON đúng schema sau, KHÔNG kèm văn bản nào khác:
 VIBE_WEIGHTS = {"d1": 0.25, "d2": 0.20, "d3": 0.20, "d4": 0.20, "d5": 0.15}
 
 HYPE_BLOCKLIST = [
-    r"đỉnh cao", r"tuyệt vời nhất", r"số\s*1\s*việt\s*nam", r"cam kết\s*100\s*%",
-    r"không thể bỏ lỡ", r"cơ hội vàng", r"đột phá", r"tiên phong",
-    r"vô đối", r"chấn động", r"hoàn hảo nhất",
+    r"đỉnh cao",
+    r"tuyệt vời nhất",
+    r"số\s*1\s*việt\s*nam",
+    r"cam kết\s*100\s*%",
+    r"không thể bỏ lỡ",
+    r"cơ hội vàng",
+    r"đột phá",
+    r"tiên phong",
+    r"vô đối",
+    r"chấn động",
+    r"hoàn hảo nhất",
 ]
 AI_OPENERS = [
-    r"^\s*trong bối cảnh", r"^\s*hãy cùng khám phá", r"^\s*bạn có biết rằng",
-    r"^\s*trong thế giới ngày nay", r"^\s*ngày nay,?\s",
+    r"^\s*trong bối cảnh",
+    r"^\s*hãy cùng khám phá",
+    r"^\s*bạn có biết rằng",
+    r"^\s*trong thế giới ngày nay",
+    r"^\s*ngày nay,?\s",
 ]
-_EMOJI_RE = re.compile("[\U0001F300-\U0001FAFF☀-➿]")
+_EMOJI_RE = re.compile("[\U0001f300-\U0001faff☀-➿]")
 
 
 def rule_fb_structure(md: str) -> Tuple[float, Dict[str, Any]]:
@@ -284,17 +302,21 @@ def rule_fb_structure(md: str) -> Tuple[float, Dict[str, Any]]:
     avg_len = sum(len(p) for p in paras) / len(paras)
     short_para_ratio = sum(1 for p in paras if len(p) <= 320) / len(paras)
     has_list = bool(re.search(r"(?m)^\s*[-*•]\s+\S|^\s*\d+[.)]\s+\S", md))
-    has_cta_line = bool(re.search(
-        r"(?im)^\s*(comment|inbox|nhắn|đăng ký|đặt lịch|booking|nhận ngay)\b", md
-    ))
+    has_cta_line = bool(
+        re.search(
+            r"(?im)^\s*(comment|inbox|nhắn|đăng ký|đặt lịch|booking|nhận ngay)\b", md
+        )
+    )
     s = 0.0
     s += 0.35 if short_para_ratio >= 0.6 else 0.35 * short_para_ratio
     s += 0.25 if avg_len <= 280 else max(0.0, 0.25 * (1 - (avg_len - 280) / 400))
     s += 0.20 if has_list else 0.0
     s += 0.20 if has_cta_line else 0.0
     return min(1.0, s), {
-        "avg_len": avg_len, "short_ratio": short_para_ratio,
-        "has_list": has_list, "has_cta_line": has_cta_line,
+        "avg_len": avg_len,
+        "short_ratio": short_para_ratio,
+        "has_list": has_list,
+        "has_cta_line": has_cta_line,
     }
 
 
@@ -302,21 +324,23 @@ def rule_vibe_penalty(md: str) -> Tuple[float, Dict[str, Any]]:
     hype_hits = sum(len(re.findall(p, md, re.I)) for p in HYPE_BLOCKLIST)
     ai_open_hit = any(re.search(p, md, re.I | re.M) for p in AI_OPENERS)
     paras = [p for p in re.split(r"\n\s*\n", md) if p.strip()]
-    over_emoji = any(
-        len(_EMOJI_RE.findall(p)) / max(1, len(p)) > 1 / 40 for p in paras
-    )
+    over_emoji = any(len(_EMOJI_RE.findall(p)) / max(1, len(p)) > 1 / 40 for p in paras)
     bullets = re.findall(r"(?m)^\s*[-*•]\s+(\S+)", md)
-    bullet_templated = (
-        len(bullets) >= 4 and len({b.lower() for b in bullets}) <= 2
-    )
+    bullet_templated = len(bullets) >= 4 and len({b.lower() for b in bullets}) <= 2
     p = 0.0
-    if hype_hits >= 2:    p += 0.10
-    if ai_open_hit:       p += 0.08
-    if over_emoji:        p += 0.05
-    if bullet_templated:  p += 0.05
+    if hype_hits >= 2:
+        p += 0.10
+    if ai_open_hit:
+        p += 0.08
+    if over_emoji:
+        p += 0.05
+    if bullet_templated:
+        p += 0.05
     return p, {
-        "hype_hits": hype_hits, "ai_open": ai_open_hit,
-        "over_emoji": over_emoji, "bullet_templated": bullet_templated,
+        "hype_hits": hype_hits,
+        "ai_open": ai_open_hit,
+        "over_emoji": over_emoji,
+        "bullet_templated": bullet_templated,
     }
 
 
@@ -347,9 +371,12 @@ class MarketingVibeEvaluator:
     ) -> MarketingVibeResult:
         prompt = (
             VIBE_RUBRIC_VI
-            + "\n\n[TIÊU ĐỀ / YÊU CẦU]\n" + (input_title or "").strip()
-            + "\n\n[NỘI DUNG MỒI / CONTEXT]\n" + (seed_content or "").strip()
-            + "\n\n[BÀI VIẾT CẦN CHẤM]\n" + (actual_output or "").strip()
+            + "\n\n[TIÊU ĐỀ / YÊU CẦU]\n"
+            + (input_title or "").strip()
+            + "\n\n[NỘI DUNG MỒI / CONTEXT]\n"
+            + (seed_content or "").strip()
+            + "\n\n[BÀI VIẾT CẦN CHẤM]\n"
+            + (actual_output or "").strip()
             + "\n\nCHỈ TRẢ JSON, không thêm markdown/code-fence."
         )
         raw = self._judge.generate(prompt)
@@ -364,14 +391,13 @@ class MarketingVibeEvaluator:
         norm = {"d1": d1 / 4, "d2": d2 / 4, "d3": d3 / 4, "d4": d4 / 4, "d5": d5 / 4}
         llm_vibe = sum(VIBE_WEIGHTS[k] * norm[k] for k in VIBE_WEIGHTS)
         fb_s, _ = rule_fb_structure(actual_output)
-        pen, _  = rule_vibe_penalty(actual_output)
+        pen, _ = rule_vibe_penalty(actual_output)
         combined = max(0.0, min(1.0, 0.85 * llm_vibe + 0.15 * fb_s - pen))
 
         reason_judge = str(obj.get("reason", "")).strip()
         reason = (
-            (reason_judge[:380] if reason_judge else "(no reason)")
-            + f" | dims=({d1},{d2},{d3},{d4},{d5}) pen={pen:.2f}"
-        )
+            reason_judge[:380] if reason_judge else "(no reason)"
+        ) + f" | dims=({d1},{d2},{d3},{d4},{d5}) pen={pen:.2f}"
 
         return MarketingVibeResult(
             llm_hook_tone_score=llm_vibe,
