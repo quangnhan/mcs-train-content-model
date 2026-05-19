@@ -415,68 +415,81 @@ AI_OPENERS = [
 _EMOJI_RE = re.compile("[\U0001f300-\U0001faff☀-➿]")
 
 
-def rule_fb_structure(md: str) -> Tuple[float, Dict[str, Any]]:
-    paras = [p.strip() for p in re.split(r"\n\s*\n", md) if p.strip()]
-    if not paras:
-        return 0.0, {"reason": "empty"}
-    avg_len = sum(len(p) for p in paras) / len(paras)
-    short_para_ratio = sum(1 for p in paras if len(p) <= 320) / len(paras)
-    has_list = bool(re.search(r"(?m)^\s*[-*•]\s+\S|^\s*\d+[.)]\s+\S", md))
-    has_cta_line = bool(
-        re.search(
-            r"(?im)^\s*(comment|inbox|nhắn|đăng ký|đặt lịch|booking|nhận ngay)\b", md
+class FbStructureRule:
+    """Rule-based: đo cấu trúc Facebook của bài viết marketing.
+
+    Dùng độc lập trong notebook:
+        rule = FbStructureRule()
+        score, detail = rule.measure(actual_output)
+    """
+
+    def measure(self, md: str) -> Tuple[float, Dict[str, Any]]:
+        paras = [p.strip() for p in re.split(r"\n\s*\n", md) if p.strip()]
+        if not paras:
+            return 0.0, {"reason": "empty"}
+        avg_len = sum(len(p) for p in paras) / len(paras)
+        short_para_ratio = sum(1 for p in paras if len(p) <= 320) / len(paras)
+        has_list = bool(re.search(r"(?m)^\s*[-*•]\s+\S|^\s*\d+[.)]\s+\S", md))
+        has_cta_line = bool(
+            re.search(
+                r"(?im)^\s*(comment|inbox|nhắn|đăng ký|đặt lịch|booking|nhận ngay)\b", md
+            )
         )
-    )
-    s = 0.0
-    s += 0.35 if short_para_ratio >= 0.6 else 0.35 * short_para_ratio
-    s += 0.25 if avg_len <= 280 else max(0.0, 0.25 * (1 - (avg_len - 280) / 400))
-    s += 0.20 if has_list else 0.0
-    s += 0.20 if has_cta_line else 0.0
-    return min(1.0, s), {
-        "avg_len": avg_len,
-        "short_ratio": short_para_ratio,
-        "has_list": has_list,
-        "has_cta_line": has_cta_line,
-    }
+        s = 0.0
+        s += 0.35 if short_para_ratio >= 0.6 else 0.35 * short_para_ratio
+        s += 0.25 if avg_len <= 280 else max(0.0, 0.25 * (1 - (avg_len - 280) / 400))
+        s += 0.20 if has_list else 0.0
+        s += 0.20 if has_cta_line else 0.0
+        return min(1.0, s), {
+            "avg_len": avg_len,
+            "short_ratio": short_para_ratio,
+            "has_list": has_list,
+            "has_cta_line": has_cta_line,
+        }
 
 
-def rule_vibe_penalty(md: str) -> Tuple[float, Dict[str, Any]]:
-    hype_hits = sum(len(re.findall(p, md, re.I)) for p in HYPE_BLOCKLIST)
-    ai_open_hit = any(re.search(p, md, re.I | re.M) for p in AI_OPENERS)
-    paras = [p for p in re.split(r"\n\s*\n", md) if p.strip()]
-    over_emoji = any(len(_EMOJI_RE.findall(p)) / max(1, len(p)) > 1 / 40 for p in paras)
-    bullets = re.findall(r"(?m)^\s*[-*•]\s+(\S+)", md)
-    bullet_templated = len(bullets) >= 4 and len({b.lower() for b in bullets}) <= 2
-    p = 0.0
-    if hype_hits >= 2:
-        p += 0.10
-    if ai_open_hit:
-        p += 0.08
-    if over_emoji:
-        p += 0.05
-    if bullet_templated:
-        p += 0.05
-    return p, {
-        "hype_hits": hype_hits,
-        "ai_open": ai_open_hit,
-        "over_emoji": over_emoji,
-        "bullet_templated": bullet_templated,
-    }
+class VibePenaltyRule:
+    """Rule-based: phát hiện các lỗi vibe cần trừ điểm (hype, AI opener, over-emoji).
+
+    Dùng độc lập trong notebook:
+        rule = VibePenaltyRule()
+        penalty, detail = rule.measure(actual_output)
+    """
+
+    def measure(self, md: str) -> Tuple[float, Dict[str, Any]]:
+        hype_hits = sum(len(re.findall(p, md, re.I)) for p in HYPE_BLOCKLIST)
+        ai_open_hit = any(re.search(p, md, re.I | re.M) for p in AI_OPENERS)
+        paras = [p for p in re.split(r"\n\s*\n", md) if p.strip()]
+        over_emoji = any(len(_EMOJI_RE.findall(p)) / max(1, len(p)) > 1 / 40 for p in paras)
+        bullets = re.findall(r"(?m)^\s*[-*•]\s+(\S+)", md)
+        bullet_templated = len(bullets) >= 4 and len({b.lower() for b in bullets}) <= 2
+        p = 0.0
+        if hype_hits >= 2:
+            p += 0.10
+        if ai_open_hit:
+            p += 0.08
+        if over_emoji:
+            p += 0.05
+        if bullet_templated:
+            p += 0.05
+        return p, {
+            "hype_hits": hype_hits,
+            "ai_open": ai_open_hit,
+            "over_emoji": over_emoji,
+            "bullet_templated": bullet_templated,
+        }
 
 
-class MarketingVibeEvaluator:
-    def __init__(self, judge_llm: JudgeLLM) -> None:
-        self._judge = judge_llm
+class MarketingVibeJudge:
+    """LLM judge: chấm bài viết marketing theo 5 chiều D1–D5 và trả về weighted score.
 
-    def _parse(self, raw: str) -> Dict[str, Any]:
-        if not raw:
-            return {}
-        m = re.search(r"\{[\s\S]*\}", raw)
-        s = m.group(0) if m else raw
-        try:
-            return json.loads(s)
-        except Exception:
-            return {}
+    Tương tự FaithfulnessGEval / ExpansionGEval nhưng dùng structured JSON thay vì GEval
+    vì cần 5 điểm riêng biệt với trọng số khác nhau — GEval chỉ trả 1 score duy nhất.
+
+    Dùng độc lập trong notebook để test riêng phần LLM judge:
+        judge = MarketingVibeJudge(judge_llm)
+        score, reason = judge.measure(input_title, seed_content, actual_output)
+    """
 
     @staticmethod
     def _clip04(v: Any) -> int:
@@ -486,9 +499,23 @@ class MarketingVibeEvaluator:
             iv = 0
         return max(0, min(4, iv))
 
-    def evaluate_one(
+    @staticmethod
+    def _parse(raw: str) -> Dict[str, Any]:
+        if not raw:
+            return {}
+        m = re.search(r"\{[\s\S]*\}", raw)
+        s = m.group(0) if m else raw
+        try:
+            return json.loads(s)
+        except Exception:
+            return {}
+
+    def __init__(self, judge_llm: JudgeLLM) -> None:
+        self._judge = judge_llm
+
+    def measure(
         self, input_title: str, seed_content: str, actual_output: str
-    ) -> MarketingVibeResult:
+    ) -> Tuple[float, str]:
         prompt = (
             VIBE_RUBRIC_VI
             + "\n\n[TIÊU ĐỀ / YÊU CẦU]\n"
@@ -509,21 +536,33 @@ class MarketingVibeEvaluator:
         d5 = self._clip04(obj.get("d5_fb_native_flow"))
 
         norm = {"d1": d1 / 4, "d2": d2 / 4, "d3": d3 / 4, "d4": d4 / 4, "d5": d5 / 4}
-        llm_vibe = sum(VIBE_WEIGHTS[k] * norm[k] for k in VIBE_WEIGHTS)
-        fb_s, _ = rule_fb_structure(actual_output)
-        pen, _ = rule_vibe_penalty(actual_output)
+        score = sum(VIBE_WEIGHTS[k] * norm[k] for k in VIBE_WEIGHTS)
+
+        reason_raw = str(obj.get("reason", "")).strip()
+        reason = (reason_raw[:380] if reason_raw else "(no reason)") + f" | dims=({d1},{d2},{d3},{d4},{d5})"
+        return score, reason
+
+
+class MarketingVibeEvaluator:
+    def __init__(self, judge_llm: JudgeLLM) -> None:
+        self._judge = MarketingVibeJudge(judge_llm)
+
+    def evaluate_one(
+        self, input_title: str, seed_content: str, actual_output: str
+    ) -> MarketingVibeResult:
+        llm_vibe, llm_reason = self._judge.measure(input_title, seed_content, actual_output)
+        fb_s, _ = FbStructureRule().measure(actual_output)
+        pen, _ = VibePenaltyRule().measure(actual_output)
         combined = max(0.0, min(1.0, 0.85 * llm_vibe + 0.15 * fb_s - pen))
 
-        reason_judge = str(obj.get("reason", "")).strip()
-        reason = (
-            reason_judge[:380] if reason_judge else "(no reason)"
-        ) + f" | dims=({d1},{d2},{d3},{d4},{d5}) pen={pen:.2f}"
+        # Append penalty info that was previously mixed into evaluate_one
+        reason = llm_reason + f" pen={pen:.2f}"
 
         return MarketingVibeResult(
             llm_hook_tone_score=llm_vibe,
             llm_reason=reason,
             rule_structure_score=fb_s,
-            rule_cta_score=float(norm["d4"]),
+            rule_cta_score=fb_s,
             rule_combined=fb_s,
             combined_score=combined,
         )
