@@ -13,7 +13,7 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Sequence, Tuple, Type
 
 import pandas as pd
-from deepeval.metrics import FaithfulnessMetric, GEval
+from deepeval.metrics import GEval
 from deepeval.models import DeepEvalBaseLLM
 from deepeval.test_case import LLMTestCase, LLMTestCaseParams
 
@@ -64,48 +64,116 @@ class JudgeLLM(DeepEvalBaseLLM):
 # --------------------------------------------------------------------------- #
 # Faithfulness — rule-based entity presence
 # --------------------------------------------------------------------------- #
-PRICE_RE = re.compile(
-    r"(?:\d{1,3}(?:[.,]\d{3})+|\d+(?:[.,]\d+)?)\s*(?:VNĐ|vnd|đ|d|USD|\$|usd|triệu|tr|k)\b",
-    re.IGNORECASE,
-)
-SPEC_RE = re.compile(
-    r"\b\d+(?:[.,]\d+)?\s*(?:GB|gb|TB|tb|mAh|mah|W|w|V|v|Hz|hz|inch|\"|cm|mm|kg|g|ml|l|%)\b",
-    re.IGNORECASE,
-)
-QUOTED_RE = re.compile(r"[\"\"]([^\"\"]{2,80})[\"\"]")
+class EntityPresenceRule:
+    """Rule-based: trích entity từ seed và đo tỉ lệ xuất hiện trong output.
+
+    Dùng độc lập trong notebook:
+        rule = EntityPresenceRule()
+        rule.extract_prices("giảm 25%, còn 149.000đ")   → ['25%', '149.000đ']
+        rule.extract_specs("bánh 420g, ly 500ml")         → ['420g', '500ml']
+        score, detail = rule.measure(seed_content, actual_output)
+    """
+
+    PRICE_RE = re.compile(
+        r"(?:\d{1,3}(?:[.,]\d{3})+|\d+)\s*(?:(?:VNĐ|vnđ|vnd|đồng|đ|USD|triệu|tr\.?|k)\b|[%$])",
+        re.IGNORECASE,
+    )
+    SPEC_RE = re.compile(
+        r"\b\d+(?:[.,]\d+)?\s*(?:ml|lít|lit|l|cc|kg|g|kcal|cal)\b",
+        re.IGNORECASE,
+    )
+    COMBO_RE = re.compile(
+        r"\b(?:combo|set|deal|gói)\s*\d+|\d+\s*(?:món|ly|tô|bát|đĩa|phần|suất|người)\b",
+        re.IGNORECASE,
+    )
+    QUOTED_RE = re.compile(r"[\"\"]([^\"\"]{2,80})[\"\"]")
+    NAME_RE = re.compile(
+        r"(?:tên|món|combo|set|menu|sản\s+phẩm|thương\s+hiệu|quán)\s*:\s*([^.\n;]{2,})",
+        re.IGNORECASE,
+    )
+
+    def extract_prices(self, text: str) -> List[str]:
+        return [m.group(0).strip() for m in self.PRICE_RE.finditer(text)]
+
+    def extract_specs(self, text: str) -> List[str]:
+        return [m.group(0).strip() for m in self.SPEC_RE.finditer(text)]
+
+    def extract_combos(self, text: str) -> List[str]:
+        return [m.group(0).strip() for m in self.COMBO_RE.finditer(text)]
+
+    def extract_quoted(self, text: str) -> List[str]:
+        return [m.group(1).strip() for m in self.QUOTED_RE.finditer(text)]
+
+    def extract_names(self, text: str) -> List[str]:
+        return [m.group(1).strip() for m in self.NAME_RE.finditer(text)]
+
+    def extract_entities(self, text: str) -> List[str]:
+        found = (
+            self.extract_prices(text)
+            + self.extract_specs(text)
+            + self.extract_combos(text)
+            + self.extract_quoted(text)
+            + self.extract_names(text)
+        )
+        seen = set()
+        out = []
+        for e in found:
+            k = e.lower()
+            if k not in seen and len(e) >= 2:
+                seen.add(k)
+                out.append(e)
+        return out
+
+    def measure(self, seed: str, output: str) -> Tuple[float, Dict[str, Any]]:
+        entities = self.extract_entities(seed)
+        if not entities:
+            return 1.0, {"entities": [], "matched": [], "note": "no entities"}
+        out_lower = output.lower()
+        matched = [e for e in entities if e.lower() in out_lower]
+        score = len(matched) / len(entities)
+        return score, {"entities": entities, "matched": matched}
 
 
-def extract_candidate_entities(seed: str) -> List[str]:
-    found: List[str] = []
-    for m in PRICE_RE.finditer(seed):
-        found.append(m.group(0).strip())
-    for m in SPEC_RE.finditer(seed):
-        found.append(m.group(0).strip())
-    for m in QUOTED_RE.finditer(seed):
-        found.append(m.group(1).strip())
-    for line in seed.replace(";", "\n").split("\n"):
-        if ":" in line:
-            key, val = line.split(":", 1)
-            if re.search(r"sản phẩm|model|tên", key, re.I) and len(val.strip()) >= 2:
-                found.append(val.strip().split(".")[0].strip())
-    seen = set()
-    out = []
-    for e in found:
-        k = e.lower()
-        if k not in seen and len(e) >= 2:
-            seen.add(k)
-            out.append(e)
-    return out
 
+class FaithfulnessGEval:
+    """GEval metric kiểm tra output có chứa claim không được hỗ trợ bởi context.
 
-def entity_presence_score(seed: str, output: str) -> Tuple[float, Dict[str, Any]]:
-    entities = extract_candidate_entities(seed)
-    if not entities:
-        return 1.0, {"entities": [], "matched": [], "note": "no entities"}
-    out_lower = output.lower()
-    matched = [e for e in entities if e.lower() in out_lower]
-    score = len(matched) / len(entities)
-    return score, {"entities": entities, "matched": matched}
+    Dùng độc lập trong notebook để test riêng phần LLM judge:
+        geval = FaithfulnessGEval(judge_llm)
+        score, reason = geval.measure(input_title, seed_content, actual_output)
+    """
+
+    _CRITERIA = (
+        "Đánh giá mức độ trung thực của bài viết marketing so với nội dung mồi (retrieval context). "
+        "Trừ điểm nếu output chứa bất kỳ claim nào KHÔNG được hỗ trợ bởi context — "
+        "kể cả claim mơ hồ, hype vô căn cứ, hoặc thông tin phóng đại. "
+        "Chỉ các thông tin, con số, và tính năng có trong context mới được phép xuất hiện. "
+        "Cho điểm cao nếu output chỉ dùng thông tin từ context, dù diễn giải bằng ngôn ngữ khác."
+    )
+
+    def __init__(self, judge_llm: JudgeLLM) -> None:
+        self._metric = GEval(
+            name="Faithfulness",
+            criteria=self._CRITERIA,
+            evaluation_params=[
+                LLMTestCaseParams.ACTUAL_OUTPUT,
+                LLMTestCaseParams.RETRIEVAL_CONTEXT,
+            ],
+            model=judge_llm,
+            async_mode=False,
+            verbose_mode=False,
+        )
+
+    def measure(self, input_title: str, seed_content: str, actual_output: str) -> Tuple[float, str]:
+        case = LLMTestCase(
+            input=input_title,
+            actual_output=actual_output,
+            retrieval_context=[seed_content],
+        )
+        self._metric.measure(case)
+        score = float(self._metric.score or 0.0)
+        reason = getattr(self._metric, "reason", "") or ""
+        return score, reason
 
 
 @dataclass
@@ -120,55 +188,96 @@ class FaithfulnessResult:
         self.combined_score = (
             0.5 * self.rule_entity_score + 0.5 * self.llm_faithfulness_score
         )
-
-
+        
 class FaithfulnessEvaluator:
     def __init__(self, judge_llm: JudgeLLM) -> None:
-        self.metric = FaithfulnessMetric(
-            threshold=0.5, model=judge_llm, async_mode=False, verbose_mode=False
-        )
+        self._geval = FaithfulnessGEval(judge_llm)
 
     def evaluate_one(
         self, input_title: str, seed_content: str, actual_output: str
     ) -> FaithfulnessResult:
-        rule_score, rule_detail = entity_presence_score(seed_content, actual_output)
-        case = LLMTestCase(
-            input=input_title,
-            actual_output=actual_output,
-            retrieval_context=[seed_content],
-        )
-        self.metric.measure(case)
-        llm_score = float(self.metric.score or 0.0)
-        reason = getattr(self.metric, "reason", "") or ""
+        rule_score, rule_detail = EntityPresenceRule().measure(seed_content, actual_output)
+        llm_score, llm_reason = self._geval.measure(input_title, seed_content, actual_output)
         return FaithfulnessResult(
             rule_entity_score=rule_score,
             rule_detail=rule_detail,
             llm_faithfulness_score=llm_score,
-            llm_reason=reason,
+            llm_reason=llm_reason,
         )
 
 
 # --------------------------------------------------------------------------- #
 # Expansion Quality
 # --------------------------------------------------------------------------- #
-@dataclass
-class ExpansionResult:
-    llm_expansion_score: float
-    llm_reason: str
-    rule_length_score: float
-    combined_score: float
+class ContentExpansionRule:
+    """Rule-based: đo mức độ mở rộng nội dung từ thông tin thô sang marketing copy.
+
+    Đánh giá 3 tín hiệu:
+    - Benefit language: có diễn giải lợi ích cho khách hàng không?
+    - Usage context: có ngữ cảnh sử dụng thực tế không?
+    - Length ratio: output có dài hơn seed hợp lý không? (target 1.5x–2.5x)
+
+    Dùng độc lập trong notebook:
+        rule = ContentExpansionRule()
+        score = rule.measure(seed_content, actual_output)
+    """
+
+    _BENEFIT_RE = re.compile(
+        r"\b(giúp|tiết kiệm|tận hưởng|thưởng thức|cảm giác|trải nghiệm|"
+        r"phù hợp|lý tưởng|dành cho|mang lại|tăng|cải thiện|giảm bớt|"
+        r"không lo|yên tâm|hợp túi tiền|đáng đồng tiền)\b",
+        re.IGNORECASE,
+    )
+    _CONTEXT_RE = re.compile(
+        r"\b(khi|lúc|dịp|buổi|cuối tuần|sáng|chiều|tối|ngày|mùa|"
+        r"cùng bạn|cùng gia đình|với bạn bè|sau khi|trước khi|"
+        r"đi picnic|đi chơi|tụ tập|sum họp|thư giãn)\b",
+        re.IGNORECASE,
+    )
+
+    def measure(self, seed: str, output: str) -> float:
+        ratio = (len(output.strip()) + 1) / (len(seed.strip()) + 1)
+        if ratio >= 2.5:
+            length_score = 1.0
+        elif ratio >= 1.5:
+            length_score = 0.7
+        elif ratio >= 1.0:
+            length_score = 0.4
+        else:
+            length_score = 0.1
+
+        benefit_count = len(self._BENEFIT_RE.findall(output))
+        benefit_score = min(1.0, benefit_count / 3)
+
+        context_count = len(self._CONTEXT_RE.findall(output))
+        context_score = min(1.0, context_count / 2)
+
+        return round(0.4 * length_score + 0.35 * benefit_score + 0.25 * context_score, 4)
 
 
-class ExpansionQualityEvaluator:
+# Alias để không vỡ code cũ nếu có notebook import trực tiếp
+LengthExpansionRule = ContentExpansionRule
+
+
+class ExpansionGEval:
+    """GEval metric đánh giá khả năng mở rộng từ seed thành bài marketing hoàn chỉnh.
+
+    Dùng độc lập trong notebook để test riêng phần LLM judge:
+        geval = ExpansionGEval(judge_llm)
+        score, reason = geval.measure(input_title, seed_content, actual_output)
+    """
+
+    _CRITERIA = (
+        "Đánh giá khả năng mở rộng từ nội dung mồi thành một bài viết marketing hoàn chỉnh. "
+        "Bài phải diễn giải rõ lợi ích cho khách hàng (benefits) và đưa ra ngữ cảnh sử dụng thực tế "
+        "dựa trên các tính năng/thông tin thô trong phần context (nội dung mồi). "
+        "Trừ điểm nếu chỉ lặp lại bullet kỹ thuật mà không giải thích giá trị."
+    )
+
     def __init__(self, judge_llm: JudgeLLM) -> None:
-        self.metric = GEval(
+        self._metric = GEval(
             name="Expansion Quality",
-            criteria=(
-                "Đánh giá khả năng mở rộng từ nội dung mồi thành một bài viết marketing hoàn chỉnh. "
-                "Bài phải diễn giải rõ lợi ích cho khách hàng (benefits) và đưa ra ngữ cảnh sử dụng thực tế "
-                "dựa trên các tính năng/thông tin thô trong phần context (nội dung mồi). "
-                "Trừ điểm nếu chỉ lặp lại bullet kỹ thuật mà không giải thích giá trị."
-            ),
+            criteria=self._CRITERIA,
             evaluation_params=[
                 LLMTestCaseParams.INPUT,
                 LLMTestCaseParams.ACTUAL_OUTPUT,
@@ -179,33 +288,40 @@ class ExpansionQualityEvaluator:
             verbose_mode=False,
         )
 
-    def _length_score(self, seed: str, output: str) -> float:
-        ratio = (len(output.strip()) + 1) / (len(seed.strip()) + 1)
-        if ratio >= 3.0:
-            return 1.0
-        if ratio >= 2.0:
-            return 0.7
-        if ratio >= 1.2:
-            return 0.4
-        return 0.1
-
-    def evaluate_one(
-        self, input_title: str, seed_content: str, actual_output: str
-    ) -> ExpansionResult:
+    def measure(self, input_title: str, seed_content: str, actual_output: str) -> Tuple[float, str]:
         case = LLMTestCase(
             input=input_title,
             actual_output=actual_output,
             context=[seed_content],
         )
-        self.metric.measure(case)
-        llm_s = float(self.metric.score or 0.0)
-        reason = getattr(self.metric, "reason", "") or ""
-        rlen = self._length_score(seed_content, actual_output)
-        combined = 0.9 * llm_s + 0.1 * rlen
+        self._metric.measure(case)
+        score = float(self._metric.score or 0.0)
+        reason = getattr(self._metric, "reason", "") or ""
+        return score, reason
+
+
+@dataclass
+class ExpansionResult:
+    llm_expansion_score: float
+    llm_reason: str
+    rule_length_score: float
+    combined_score: float
+
+
+class ExpansionQualityEvaluator:
+    def __init__(self, judge_llm: JudgeLLM) -> None:
+        self._geval = ExpansionGEval(judge_llm)
+
+    def evaluate_one(
+        self, input_title: str, seed_content: str, actual_output: str
+    ) -> ExpansionResult:
+        llm_score, llm_reason = self._geval.measure(input_title, seed_content, actual_output)
+        rule_content = ContentExpansionRule().measure(seed_content, actual_output)
+        combined = 0.9 * llm_score + 0.1 * rule_content
         return ExpansionResult(
-            llm_expansion_score=llm_s,
-            llm_reason=reason,
-            rule_length_score=rlen,
+            llm_expansion_score=llm_score,
+            llm_reason=llm_reason,
+            rule_length_score=rule_content,
             combined_score=combined,
         )
 
@@ -228,36 +344,39 @@ Bạn là biên tập viên cấp cao về marketing performance và content fou
 tại thị trường Việt Nam, chuyên Facebook-native, F&B, growth, và franchise.
 
 Bạn ĐANG chấm một bài viết marketing tiếng Việt theo phong cách dataset chuẩn:
-- Giọng founder/operator: quyết liệt, thực tế, có tư duy số.
-- Tư duy performance: ngân sách, CPL/CTR/ROAS/AOV/CAC/retention xuất hiện tự nhiên.
-- Persuasion grounded: thuyết phục dựa trên specifics, không hype rỗng.
+- Giọng trực tiếp, thực tế: quyết liệt, gần gũi, KHÔNG brand-speak hoặc AI template.
+- Tư duy kinh doanh F&B: giá cụ thể, deal/combo, tiết kiệm chi phí, hoặc KPI xuất hiện tự nhiên.
+- Persuasion grounded: thuyết phục dựa trên specifics (con số, deal, thời hạn), không hype rỗng.
 - Facebook-native: đoạn ngắn, nhịp gãy, code-switching Việt–Anh tự nhiên.
 - CTA chốt rõ, có token hành động cụ thể ("Comment FRANCHISE", "Inbox COMBO89").
 
 Bạn KHÔNG chấm theo tiêu chuẩn văn học, sang trọng, hoặc sáng tạo nghệ thuật.
-Một bài "đẹp như văn" nhưng thiếu founder tone và thiếu strategic visibility
-PHẢI bị điểm thấp hơn một bài thô-nhưng-thật-và-có-số.
+Một bài "đẹp như văn" nhưng thiếu tính thực tế và thiếu specifics PHẢI bị điểm thấp hơn
+một bài thô-nhưng-thật-và-có-số.
 
-Chấm 5 chiều, mỗi chiều là SỐ NGUYÊN 0..4 (KHÔNG cho điểm trung bình an toàn):
+Chấm 5 chiều, mỗi chiều là SỐ NGUYÊN 0..4:
 
-D1 FOUNDER_VOICE      — Giọng founder/operator thật, KHÔNG brand-speak/AI tone.
-D2 BUSINESS_REALISM   — Tư duy KPI/ngân sách/funnel/ROAS xuất hiện tự nhiên.
+D1 VOICE_AUTHENTICITY — Giọng thật, trực tiếp, KHÔNG brand-speak/AI tone/văn hoa.
+                        F&B operator tone hoặc founder tone đều được chấp nhận.
+D2 BUSINESS_GROUNDING — Bài có neo vào thực tế kinh doanh F&B:
+                        giá cụ thể / deal / % giảm / combo / thời hạn / hoặc KPI.
+                        KHÔNG yêu cầu ROAS/CPL — price anchoring là đủ.
 D3 PERSUASION_GROUND  — Thuyết phục bằng specifics, KHÔNG hype rỗng.
 D4 CTA_QUALITY        — CTA cụ thể, có token hành động, audience-fit, low-friction.
 D5 FB_NATIVE_FLOW     — Nhịp Facebook tự nhiên, KHÔNG AI tell, KHÔNG văn essay.
 
 Định nghĩa mốc cho MỖI chiều:
   4 = xuất sắc, đúng phong cách dataset, không lỗi.
-  3 = tốt, lệch nhẹ.
-  2 = trung bình, lệch rõ về generic.
+  3 = tốt, làm đúng vai trò của chiều đó, lệch nhẹ hoặc thiếu một yếu tố nhỏ.
+  2 = trung bình, thiếu rõ ràng hoặc chủ yếu generic.
   1 = yếu, chủ yếu generic/AI-template.
   0 = sai phong cách hoàn toàn (văn học hoá, hype rỗng, press release, hoặc thiếu hẳn).
 
-Quy tắc CHỐNG NÉN ĐIỂM (bắt buộc):
+Quy tắc chấm điểm (bắt buộc):
 - Không cho cùng số ở cả 5 chiều trừ khi thực sự đồng nhất.
-- Phải dùng đủ dải 0..4. KHÔNG mặc định 3.
-- Một bài "ổn nhưng generic" mặc định = 2 ở chiều liên quan, KHÔNG phải 3.
-- Nếu có MỘT lỗi nặng (hype rỗng, AI opener, CTA template), ÍT NHẤT MỘT chiều ≤ 1.
+- Bài F&B marketing CHẤT LƯỢNG TỐT (có giá, deal, CTA rõ, nhịp tự nhiên) xứng đáng 3–4.
+- Chỉ cho 2 khi chiều đó thực sự thiếu hoặc generic, không phải vì "không hoàn hảo".
+- Nếu có lỗi nặng (hype rỗng, AI opener, CTA template), ÍT NHẤT MỘT chiều ≤ 1.
 
 Trả về JSON đúng schema sau, KHÔNG kèm văn bản nào khác:
 {
@@ -270,7 +389,8 @@ Trả về JSON đúng schema sau, KHÔNG kèm văn bản nào khác:
 }
 """
 
-VIBE_WEIGHTS = {"d1": 0.25, "d2": 0.20, "d3": 0.20, "d4": 0.20, "d5": 0.15}
+# D2 weight reduced (no longer requires hard KPI acronyms); D3 raised (most measurable in F&B copy)
+VIBE_WEIGHTS = {"d1": 0.25, "d2": 0.15, "d3": 0.25, "d4": 0.20, "d5": 0.15}
 
 HYPE_BLOCKLIST = [
     r"đỉnh cao",
