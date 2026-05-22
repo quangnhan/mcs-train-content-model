@@ -27,7 +27,6 @@ ENV/
 # Evaluation / experiment artifacts
 evaluation/.deepeval
 .deepeval*
-results/
 wandb/
 mlruns/
 outputs/
@@ -45,7 +44,6 @@ runs/
 *.h5
 
 # Large data files
-*.csv
 *.tsv
 *.parquet
 *.arrow
@@ -67,3 +65,5 @@ desktop.ini
 .vscode/
 *.swp
 *.swo
+
+.claude

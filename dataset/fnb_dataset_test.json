@@ -1,102 +1,602 @@
 [
   {
+    "id": 1,
     "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết Facebook-native cho traffic về landing page khuyến mãi. Output 120-200 từ, đoạn ngắn, hook rõ, CTA cụ thể, không hype rỗng, không bịa claim ngoài seed.",
     "title": "Viết caption Facebook cho landing page ưu đãi của Bếp Quê OCOP — combo đặc sản miền Tây giảm 20%.",
     "seed": "Thương hiệu: Bếp Quê OCOP — đặc sản OCOP, 3 điểm bán Cần Thơ\nSản phẩm: Combo Miền Tây — 4 món đặc sản, hộp quà 1,2kg\nGiá: 239.000đ (gốc 299.000đ, -20%), freeship 5km\nĐiều kiện: 10-20/6, đặt qua landing page, giới hạn 100 combo\nĐối tượng: 24-40 tuổi, dân văn phòng, Cần Thơ/Ninh Kiều\nKênh: Facebook Page, landing page, Zalo OA\nKPI: CTR ≥ 2,8%, CPL ≤ 18.000đ"
   },
   {
+    "id": 2,
     "instruction": "Bạn là copywriter marketing người Việt, viết caption Facebook cho chiến dịch Trung Thu ngành F&B với giọng director marketing dày dạn: sắc, thực chiến, Facebook-native, ưu tiên lợi ích mua ngay và CTA rõ. Output dài 250-400 từ, đoạn ngắn dễ đọc, bám chặt seed, có hook, offer, urgency, KPI/đo lường tinh gọn, KHÔNG bịa claim ngoài dữ liệu.",
     "title": "Viết caption Facebook cho chiến dịch Trung Thu của Matcha Mây — set trà trái cây & matcha giới hạn, chốt đơn sớm quà biếu.",
     "seed": "Thương hiệu: Matcha Mây—trà trái cây/matcha, 8 điểm bán TP.HCM\nSản phẩm: Mid-Autumn Duo—2 ly 700ml + hộp quà mini\nGiá: 119.000đ (149.000đ, -20%), freeship 3km\nĐiều kiện: 15/8-15/9, GrabFood/inbox, 80 set/ngày\nĐối tượng: 22-35 tuổi, dân VP, Q1,Q3,PN,BT\nKênh: Facebook Page, Messenger, GrabFood, Zalo OA\nKPI: CTR≥3,5%, ROAS≥4, GMV≥180 triệu"
   },
   {
+    "id": 3,
     "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết Facebook-native cho activation tại điểm bán, câu ngắn gọn, rõ ưu đãi và CTA. Bám sát seed, không bịa claim, không hype rỗng, output phù hợp bài dài 120-200 từ.",
     "title": "Viết caption Facebook cho activation tại điểm bán của Cầu Tre — dùng thử Há Cảo Tôm giảm sốc cuối tuần.",
     "seed": "Thương hiệu: Cầu Tre — thực phẩm đông lạnh, 40 điểm bán, TP.HCM\nSản phẩm: Há Cảo Tôm 500g, gói 20 viên\nGiá: 59.000đ (gốc 79.000đ, -25%), tặng sốt chấm\nĐiều kiện: T7-CN, tại Co.opmart, giới hạn 100 gói/điểm\nĐối tượng: 25-40 tuổi, nhân viên văn phòng, Q1, Q3, Bình Thạnh\nKênh: Facebook Page, POSM, Zalo OA\nKPI: CTR ≥ 2,8%, GMV/điểm ≥ 6 triệu"
   },
   {
+    "id": 4,
     "instruction": "Bạn là copywriter marketing người Việt, viết Facebook-native cho bài báo cáo hiệu quả F&B, giọng thân thiện như freelancer, rõ số liệu, dễ đọc. Output 120-200 từ, có mở bài, bullet ngắn, kết luận/CTA nội bộ; không hype, không bịa ngoài seed.",
     "title": "Viết post Facebook báo cáo hiệu quả chiến dịch combo trưa của Chay An Nhiên — chốt nhanh CTR, ROAS và GMV.",
     "seed": "Thương hiệu: Chay An Nhiên — nhà hàng chay, 3 CN TP.HCM\nSản phẩm: Combo trưa xanh 1 phần, 1 canh, 1 trà 650g\nGiá: 79.000đ (gốc 99.000đ, -20%), freeship 2km\nĐiều kiện: 1-30/04, GrabFood, ShopeeFood, tối đa 80 combo/ngày\nĐối tượng: 24-40 tuổi, dân văn phòng Q1, Q3, Phú Nhuận\nKênh: Facebook Page, GrabFood, ShopeeFood, Zalo OA\nKPI: CTR 3,4%, ROAS 4,1, GMV 96 triệu"
   },
   {
+    "id": 5,
     "instruction": "Bạn là copywriter marketing người Việt, giọng chuyên nghiệp như agency, viết Facebook-native nhưng bám tư duy CRM/email: rõ offer, segment, CTA cụ thể, không hype rỗng. Output dài 250-400 từ, đoạn ngắn, có hook-mở bài-thân bài-CTA, tuyệt đối chỉ dùng fact trong seed và lồng KPI, ngân sách, đo lường theo ngữ cảnh seed.",
     "title": "Viết caption Facebook cho Herb n' Glow Detox Tea — combo 7 ngày thanh nhẹ, giảm 20% cho tệp văn phòng.",
     "seed": "Thương hiệu: Herb n' Glow — trà detox, 6 kiosk Hà Nội\nSản phẩm: Combo 7 ngày Detox Tea — 14 chai x 350ml\nGiá: 279.000đ (gốc 349.000đ, -20%), freeship 2km\nĐiều kiện: 1-15/6, đặt link email/Zalo OA, giới hạn 80 combo/ngày\nĐối tượng: 23-35 tuổi, dân văn phòng, Cầu Giấy-Ba Đình-Đống Đa\nKênh: Facebook Page, email, Zalo OA\nKPI: CPL ≤ 18.000đ, CR email ≥ 4%, GMV ≥ 120 triệu"
   },
   {
+    "id": 6,
     "instruction": "Bạn là copywriter marketing F&B người Việt, giọng director marketing dày dạn, viết Instagram-native, súc tích, có hook rõ và CTA cụ thể. Bám sát seed, ưu tiên lợi ích mua ngay, không hype rỗng, không bịa claim ngoài dữ liệu.",
     "title": "Viết caption Instagram cho Urban Brew Coffee — Cold Brew Oat Latte giảm 20% giờ chiều.",
     "seed": "Thương hiệu: Urban Brew Coffee — chuỗi cà phê, 12 cửa hàng TP.HCM\nSản phẩm: Cold Brew Oat Latte 500ml\nGiá: 49.000đ (gốc 61.000đ, -20%)\nĐiều kiện: 14h-17h, T2-T6, GrabFood, giới hạn 80 ly/ngày\nĐối tượng: 22-34 tuổi, dân văn phòng, Q1, Q3, Bình Thạnh\nKênh: Instagram, GrabFood, Facebook Page\nKPI: CTR ≥ 2,8%, ROAS ≥ 3,2"
   },
   {
+    "id": 7,
     "instruction": "Bạn là copywriter marketing người Việt, viết caption Facebook-native cho A/B testing creative, giọng thân thiện như freelancer, ngắn gọn 50-100 từ. Bám sát seed, ưu tiên hook rõ lợi ích, CTA cụ thể, không hype rỗng, không bịa claim ngoài dữ liệu.",
     "title": "Viết caption Facebook A/B test cho Cơm Tấm Trưa Nay — suất cơm văn phòng giao nhanh giá mềm.",
     "seed": "Thương hiệu: Cơm Tấm Trưa Nay — 3 điểm bán Q1, Q3, Bình Thạnh\nSản phẩm: Cơm tấm sườn bì chả — 1 phần 450g\nGiá: 49.000đ (gốc 59.000đ, -17%), freeship 2km\nĐiều kiện: 11h-13h, đặt GrabFood hoặc inbox, 80 suất/ngày\nĐối tượng: 22-35 tuổi, dân văn phòng, Q1 Q3 Bình Thạnh\nKênh: Facebook Page, GrabFood, Messenger\nKPI: CTR ≥ 2,8%, CPL ≤ 12.000đ"
   },
   {
+    "id": 8,
     "instruction": "Bạn là copywriter marketing người Việt, viết Facebook-native cho founder chuỗi BBQ đang pitch dịch vụ B2B catering. Giọng startup thực chiến, ngắn gọn nhưng có số liệu, nêu rõ offer, ngân sách, KPI đo lường; không hype rỗng, không bịa claim ngoài seed.",
     "title": "Viết caption Facebook pitch dịch vụ B2B catering của Seoul Fire BBQ — set tiệc công ty trọn gói, chốt lead nhanh.",
     "seed": "Thương hiệu: Seoul Fire BBQ — chuỗi lẩu nướng, 12 chi nhánh HN+HCM\nSản phẩm: B2B Catering BBQ — set 50-200 khách, line buffet onsite\nGiá: từ 189.000đ/người, bill từ 15 triệu tặng backdrop\nĐiều kiện: đặt trước 5 ngày, cọc 30%, áp dụng T2-T6\nĐối tượng: HR, Admin, Office Manager 25-40 tuổi, HN+HCM\nKênh: Facebook Page, Zalo OA, form lead, hotline\nKPI: CPL ≤ 120.000đ, CTR ≥ 2,5%, 20 lead/tháng"
   },
   {
+    "id": 9,
     "instruction": "Bạn là copywriter marketing người Việt cho F&B, giọng thân thiện như freelancer, viết Facebook-native 120-200 từ, câu ngắn, dễ chốt đơn. Bám sát seed, có hook Tết, nêu ưu đãi rõ ràng, CTA cụ thể, không hype rỗng, không bịa claim ngoài dữ liệu.",
     "title": "Viết caption Facebook cho Lộc Cốc Coffee dịp Tết — combo cà phê take-away mở lộc đầu năm giảm 20%.",
     "seed": "Thương hiệu: Lộc Cốc Coffee — cà phê take-away, 8 kiosk, TP.HCM\nSản phẩm: Combo Mở Lộc — 2 ly cà phê sữa 500ml\nGiá: 79.000đ (gốc 99.000đ, -20%), freeship 2km\nĐiều kiện: 20-29 Tết, GrabFood/Facebook, giới hạn 80 combo/ngày\nĐối tượng: 22-35 tuổi, dân văn phòng, Q1, Q3, Phú Nhuận\nKênh: Facebook Page, Messenger, GrabFood, Zalo OA\nKPI: CTR ≥ 3,5%, GMV Tết ≥ 30 triệu"
   },
   {
+    "id": 10,
     "instruction": "Bạn là copywriter marketing người Việt, viết caption Facebook cho thương hiệu F&B với giọng founder startup: thẳng, thật, có góc nhìn sản phẩm và ưu đãi rõ ràng. Viết Facebook-native, đoạn ngắn, 120-200 từ, có hook Giáng Sinh/Năm Mới, CTA cụ thể, không hype rỗng, không bịa claim ngoài seed.",
     "title": "Viết caption Facebook cho ChillTea Bottles mùa Giáng Sinh — combo RTD 6 chai giảm sâu, chốt quà cuối năm.",
     "seed": "Thương hiệu: ChillTea Bottles — RTD trà trái cây, 12 điểm bán TP.HCM\nSản phẩm: Festive Mix 6 chai 350ml — đào, vải, tắc mật ong\nGiá: 129.000đ (gốc 169.000đ, -24%), freeship 5km\nĐiều kiện: 20/12-02/01, GrabFood, ShopeeFood, giới hạn 80 combo/ngày\nĐối tượng: 22-34 tuổi, dân văn phòng, Q1, Q3, Phú Nhuận\nKênh: Facebook Page, Messenger, GrabFood, ShopeeFood\nKPI: CTR >= 3,2%, ROAS >= 4, GMV >= 60 triệu"
   },
   {
+    "id": 11,
     "instruction": "Bạn là copywriter marketing người Việt, giọng director marketing F&B dày dạn, viết Facebook-native ngắn gọn 50-100 từ, ưu tiên hook rõ và CTA trực diện. Bám sát seed, phục vụ A/B testing creative, không hype rỗng, không bịa claim ngoài dữ liệu.",
     "title": "Viết caption Facebook A/B test cho Green Press Juice — combo smoothie healthy 3 chai giảm 22%.",
     "seed": "Thương hiệu: Green Press Juice — nước ép, 4 cửa hàng TP.HCM\nSản phẩm: Combo Smoothie Clean 3 chai x 300ml\nGiá: 109.000đ (gốc 139.000đ, -22%), freeship 2km\nĐiều kiện: 6-10/6, đặt GrabFood, giới hạn 80 combo/ngày\nĐối tượng: 23-35 tuổi, dân văn phòng, Q1-Q3-Phú Nhuận\nKênh: Facebook Page, GrabFood, Messenger\nKPI: CTR ≥ 3,2%, ROAS ≥ 3,5"
   },
   {
+    "id": 12,
     "instruction": "Bạn là copywriter marketing người Việt, giọng director marketing F&B dày dạn, viết Facebook-native ngắn gọn, sắc và chốt lợi ích nhanh. Output 50-100 từ, hook rõ, CTA cụ thể, không hype rỗng, không bịa claim ngoài seed.",
     "title": "Viết caption Facebook cho billboard ngã tư của King BBQ — Buffet nướng lẩu 199K, chốt deal đi ăn ngay.",
     "seed": "Thương hiệu: King BBQ — chuỗi lẩu nướng, 85 nhà hàng, HN & TP.HCM\nSản phẩm: Buffet nướng lẩu 199K/người, hơn 30 món thịt & panchan\nGiá: 199.000đ (gốc 269.000đ, -26%), chưa gồm VAT\nĐiều kiện: 11h-14h & 17h-21h, T2-T6, áp dụng tại cửa hàng chọn lọc\nĐối tượng: 22-35 tuổi, dân văn phòng, HN & TP.HCM, gần trục lớn\nKênh: Facebook Page, OOH billboard, Google Maps, GrabFood\nKPI: Reach 500.000, CTR Maps ≥ 2,5%"
   },
   {
+    "id": 13,
     "instruction": "Bạn là copywriter marketing F&B người Việt, giọng chuyên nghiệp như agency, viết Facebook-native cho traffic về landing page khuyến mãi. Output 120-200 từ, rõ hook-lợi ích-ưu đãi-CTA, bám sát seed, không bịa claim ngoài dữ liệu.",
     "title": "Viết caption Facebook kéo traffic về landing page khuyến mãi cho Chấm Ngon — combo nước chấm gia đình giảm 20%.",
     "seed": "Thương hiệu: Chấm Ngon — gia vị đóng chai, 12 điểm bán, TP.HCM\nSản phẩm: Combo 3 chai nước chấm 250ml: mắm tỏi ớt, sốt me, muối chấm\nGiá: 119.000đ (gốc 149.000đ, -20%), freeship đơn từ 2 combo\nĐiều kiện: 1-15/6, landing page, nội thành HCM, tối đa 200 combo\nĐối tượng: 25-40 tuổi, nội trợ/văn phòng, Q1, Q3, Bình Thạnh\nKênh: Facebook Page, landing page, Messenger, Zalo OA\nKPI: CTR ≥ 2,8%, CPL ≤ 18.000đ, ROAS ≥ 3"
   },
   {
+    "id": 14,
     "instruction": "Bạn là copywriter marketing người Việt, giọng director marketing F&B dày dạn, viết Facebook Ads native, rõ offer, ngắn gọn và có CTA chốt đơn. Bám sát seed, ưu tiên hook bán hàng, không hype rỗng, không bịa claim ngoài dữ liệu đã cho.",
     "title": "Viết caption Facebook Ads cho Seoul Fire BBQ — buffet lẩu nướng 199K, hook đi nhóm càng lời.",
     "seed": "Thương hiệu: Seoul Fire BBQ — chuỗi lẩu nướng, 8 điểm bán Hà Nội\nSản phẩm: Buffet Seoul 199K — 40+ món thịt bò, heo, gà, panchan\nGiá: 199.000đ (gốc 269.000đ, -26%), tặng Pepsi refill\nĐiều kiện: 17h-22h T2-T5, đặt inbox FB, áp dụng 4 người trở lên\nĐối tượng: 22-35 tuổi, dân văn phòng, Cầu Giấy, Đống Đa, Thanh Xuân\nKênh: Facebook Page, Messenger, Zalo OA\nKPI: CTR ≥ 2,8%, CPL ≤ 18.000đ, ROAS ≥ 4"
   },
   {
+    "id": 15,
     "instruction": "Bạn là copywriter marketing người Việt, giọng director marketing F&B dày dạn, viết Facebook-native, rõ brief, ít tính từ rỗng. Khi triển khai, giữ 120-200 từ, bám sát seed, nêu đúng insight bao bì và CTA cụ thể, không bịa claim ngoài dữ liệu.",
     "title": "Viết post Facebook brief thiết kế bao bì cho Circle24 Mart — hộp cơm tiện lợi mới, nhận diện mạnh giờ cao điểm.",
     "seed": "Thương hiệu: Circle24 Mart — cửa hàng tiện lợi 24/7, 18 điểm bán Hà Nội\nSản phẩm: Hộp cơm GoBox 350g, nắp seal, ăn nhanh tại văn phòng\nGiá: 39.000đ (gốc 49.000đ, -20%), không freeship\nĐiều kiện: Ra mắt T2-T6, bán tại quầy & app, giới hạn 200 hộp/ngày\nĐối tượng: 22-35 tuổi, dân văn phòng, Cầu Giấy-Ba Đình-Đống Đa\nKênh: Facebook Page, GrabFood, ShopeeFood\nKPI: CTR ≥ 2,8%, AOV ≥ 75.000đ, GMV ≥ 60 triệu"
   },
   {
+    "id": 16,
     "instruction": "Bạn là copywriter marketing người Việt, viết nội dung push notification cho app của thương hiệu F&B theo giọng thân thiện như freelancer, ngắn gọn và Facebook-native. Output 50-100 từ, hook rõ, CTA cụ thể, bám sát seed, không hype rỗng.",
     "title": "Viết push notification app cho Circle K — combo ăn đêm giảm giá, chốt đơn nhanh sau 22h.",
     "seed": "Thương hiệu: Circle K — cửa hàng tiện lợi 24/7, 400+ điểm, HN & HCM\nSản phẩm: Combo ăn đêm 1 mì ly + 1 xúc xích + 1 nước 390ml\nGiá: 49.000đ (gốc 69.000đ, -29%), freeship 2km\nĐiều kiện: 22h-2h, đặt app, giới hạn 100 combo/ngày\nĐối tượng: 18-30 tuổi, freelancer, sinh viên, nội thành\nKênh: App Circle K, Facebook Page, Zalo OA\nKPI: CTR ≥ 4%, GMV đêm ≥ 20 triệu"
   },
   {
+    "id": 17,
     "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết Facebook-native rõ ý, đoạn ngắn, dễ triển khai cho giai đoạn chiến lược thương hiệu. Bám sát seed, nêu hook, lợi ích cốt lõi và CTA cụ thể, không hype rỗng, không bịa claim ngoài dữ liệu.",
     "title": "Viết post Facebook chiến lược thương hiệu cho Mộc Nhiên Detox — hook sống nhẹ bụng, uống lành mỗi ngày.",
     "seed": "Thương hiệu: Mộc Nhiên Detox — trà thảo mộc, 3 kiosk Hà Nội\nSản phẩm: Combo Detox 7 Ngày — 14 chai 350ml\nGiá: 329.000đ (gốc 399.000đ, -18%), freeship 2km\nĐiều kiện: 1-15/6, đặt Facebook hoặc Zalo, giới hạn 40 combo/ngày\nĐối tượng: 23-35 tuổi, dân văn phòng, Cầu Giấy-Ba Đình\nKênh: Facebook Page, Messenger, Zalo OA\nKPI: CTR ≥ 2,8%, CPL ≤ 18.000đ"
   },
   {
+    "id": 18,
     "instruction": "Bạn là copywriter marketing người Việt, giọng chuyên nghiệp như agency F&B, viết Facebook-native rõ cấu trúc, ngắn gọn và có CTA cụ thể. Bám sát seed, ưu tiên thông tin phục vụ kế hoạch livestream TikTok Shop, không thêm claim ngoài dữ liệu.",
     "title": "Viết post Facebook cho kế hoạch livestream TikTok Shop của Sweet Crumbs Bakery — Mini Cake Box giá tốt, chốt đơn nhanh.",
     "seed": "Thương hiệu: Sweet Crumbs Bakery, 4 tiệm bánh ngọt tại TP.HCM\nSản phẩm: Mini Cake Box 4 vị, hộp 380g\nGiá: 129.000đ (gốc 169.000đ, -24%), freeship 3km\nĐiều kiện: Livestream 20h T6, TikTok Shop, giới hạn 80 hộp\nĐối tượng: Nữ 22-34, dân văn phòng, Q1, Q3, Phú Nhuận\nKênh: Facebook Page, TikTok Shop, Messenger\nKPI: CTR ≥ 2,8%, GMV live ≥ 15 triệu"
   },
   {
+    "id": 19,
     "instruction": "Bạn là copywriter marketing người Việt, viết Facebook-native cho giai đoạn chiến lược thương hiệu F&B, giọng chuyên nghiệp như agency, súc tích nhưng có chiều sâu. Output 250-400 từ, đoạn rõ ý, có hook chiến lược, nêu KPI, phân bổ ngân sách, đo lường cụ thể, KHÔNG bịa claim ngoài seed.",
     "title": "Viết bài Facebook chiến lược thương hiệu cho Mây Kem Gelato — hook xây nhận diện premium trẻ tại TP.HCM.",
     "seed": "Thương hiệu: Mây Kem Gelato — 4 cửa hàng dessert shop, TP.HCM\nSản phẩm: Gelato Ý 12 vị, ly 90g/150g, combo 3 ly\nGiá: từ 49.000đ, combo 129.000đ, freeship 2km\nĐiều kiện: Q3/2026, Meta+GrabFood, HCM, 300 combo/tháng\nĐối tượng: 18-32 tuổi, dân văn phòng, Q1 Q3 Phú Nhuận\nKênh: Facebook Page, Instagram, GrabFood, Zalo OA\nKPI: Reach 500.000, CTR 2,8%, ROAS 3,2"
   },
   {
+    "id": 20,
     "instruction": "Bạn là copywriter marketing F&B người Việt, viết kế hoạch livestream Facebook cho nhà hàng buffet với giọng agency chuyên nghiệp, Facebook-native, rõ cấu trúc triển khai. Output 250-400 từ, có hook, flow livestream, CTA, KPI, ngân sách và đo lường cụ thể; không bịa claim ngoài seed.",
     "title": "Viết kế hoạch livestream Facebook cho King BBQ Buffet — chốt bàn combo buffet tối giữa tuần với ưu đãi nhóm 4.",
     "seed": "Thương hiệu: King BBQ Buffet, 12 chi nhánh TP.HCM\nSản phẩm: Buffet tối Standard 299.000đ/người, nhóm 4 tặng 1 nước\nGiá: 299.000đ (gốc 359.000đ, -17%), không freeship\nĐiều kiện: T3-T5, live 19:30, đặt inbox, 100 voucher/chi nhánh\nĐối tượng: 24-40 tuổi, dân VP, gia đình trẻ, Q1,Q3,Phú Nhuận\nKênh: Facebook Page, Messenger, Zalo OA\nKPI: CPL ≤ 18.000đ, ROAS ≥ 4, bàn đặt từ live ≥ 120"
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết Facebook-native nhưng tối ưu tư duy SEO, câu ngắn, rõ ý, không hype rỗng. Bám sát seed, output 120-200 từ, có hook, lợi ích chính và CTA cụ thể, không bịa claim ngoài dữ liệu.",
+    "title": "Viết bài Facebook cho Circle K 24/7 — combo ăn khuya tiết kiệm cho dân văn phòng ca muộn.",
+    "seed": "Thương hiệu: Circle K — tiện lợi 24/7, 400+ cửa hàng, TP.HCM\nSản phẩm: Combo ăn khuya 1 mì ly + 1 xúc xích + 1 nước 500ml\nGiá: 49.000đ (gốc 63.000đ, -22%)\nĐiều kiện: 21h-2h, mua tại quầy, giới hạn 1 combo/hóa đơn\nĐối tượng: 20-35 tuổi, nhân viên ca muộn, Q1-Q3-Bình Thạnh\nKênh: Facebook Page, Zalo OA, Google Business Profile\nKPI: CTR ≥ 2,8%, CPL ≤ 12.000đ",
+    "id": 21
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng founder startup F&B, viết Facebook-native ngắn gọn 50-100 từ, vào thẳng hook và CTA. Không hype rỗng, không bịa claim ngoài seed, ưu tiên ngôn ngữ bán hàng thực chiến.",
+    "title": "Viết caption Facebook cho activation tại điểm bán của Bụi Cafe — mua 1 ly tặng topping giờ cao điểm sáng.",
+    "seed": "Thương hiệu: Bụi Cafe — take-away, 4 kiosk, TP.HCM\nSản phẩm: Cà phê sữa đá 500ml, thêm foam muối\nGiá: 39.000đ (gốc 49.000đ), tặng topping 100%\nĐiều kiện: 7-9h T2-T6, mua tại quầy, 1 topping/ly\nĐối tượng: 22-35 tuổi, dân văn phòng, Q1-Q3-Phú Nhuận\nKênh: Facebook Page, story, standee tại quầy\nKPI: CTR ≥ 2,8%, 120 ly/ngày",
+    "id": 22
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng chuyên nghiệp như agency, viết Facebook-native ngắn gọn, rõ ưu đãi và CTA. Bám sát seed, không hype rỗng, không bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook cho combo cà phê sáng của Urban Bean — mua 2 ly giảm 30%.",
+    "seed": "Thương hiệu: Urban Bean — chuỗi cà phê, 12 cửa hàng TP.HCM\nSản phẩm: Combo Morning Duo — 2 ly 500ml tùy chọn\nGiá: 79.000đ (gốc 113.000đ, -30%), freeship 2km\nĐiều kiện: 6h-10h, T2-T6, đặt qua TikTok Shop, giới hạn 100 combo/ngày\nĐối tượng: 22-35 tuổi, dân văn phòng, Q1-Q3-Phú Nhuận\nKênh: Facebook Page, TikTok Ads, TikTok Shop\nKPI: CTR ≥ 2,5%, ROAS ≥ 3,2",
+    "id": 23
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng founder startup F&B, viết Facebook-native ngắn gọn 50-100 từ, rõ hook và CTA. Chỉ bám seed, ưu tiên thông tin bán hàng, không hype rỗng, không bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook cho combo sáng của Urban Roast Coffee — deal cà phê + bánh giá tốt cho dân văn phòng.",
+    "seed": "Thương hiệu: Urban Roast Coffee — chuỗi cà phê, 12 cửa hàng HN\nSản phẩm: Combo Sáng Nhanh — 1 cà phê 500ml + 1 croissant\nGiá: 59.000đ (gốc 79.000đ, -25%), freeship 2km\nĐiều kiện: 6h30-10h, T2-T6, đặt GrabFood hoặc inbox\nĐối tượng: 22-35 tuổi, dân văn phòng, Cầu Giấy-Ba Đình\nKênh: Facebook Page, Messenger, GrabFood\nKPI: CTR ≥ 2,8%, GMV sáng ≥ 15 triệu",
+    "id": 24
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết phản hồi review tiêu cực theo kiểu Facebook-native, ngắn gọn 50-100 từ. Ưu tiên xin lỗi chân thành, xử lý vấn đề rõ ràng, CTA inbox cụ thể, KHÔNG tranh cãi hay hứa quá seed.",
+    "title": "Viết phản hồi review tiêu cực trên Facebook cho Fresh Press Juice Bar — xử lý phàn nàn smoothie giao chậm, đá tan.",
+    "seed": "Thương hiệu: Fresh Press Juice Bar — nước ép healthy, 3 điểm bán Hà Nội\nSản phẩm: Green Detox Smoothie 350ml, chai PET\nGiá: 59.000đ, freeship đơn từ 99.000đ qua app\nĐiều kiện: 7h-21h, GrabFood/ShopeeFood, bán kính 5km\nĐối tượng: 22-35 tuổi, dân văn phòng, Cầu Giấy-Ba Đình\nKênh: Facebook Page, Messenger, GrabFood, ShopeeFood\nKPI: retention >= 35%, rating TB >= 4.6",
+    "id": 25
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng founder startup F&B, viết Facebook-native dài 250-400 từ, rõ offer, có hook, CTA cụ thể, không hype rỗng. Bám sát seed, ưu tiên insight đi ăn nhóm mùa lễ, nêu lợi ích thực tế và không bịa claim ngoài dữ liệu đã cho.",
+    "title": "Viết caption Facebook cho Noel & Năm Mới của Seoul Garden Buffet — combo đi nhóm giảm sâu, chốt bàn sớm.",
+    "seed": "Thương hiệu: Seoul Garden Buffet, 8 chi nhánh, Hà Nội & TP.HCM\nSản phẩm: Buffet Noel & New Year, 90 món, lẩu+nướng, 120 phút\nGiá: 329.000đ (gốc 429.000đ, -23%), tặng 1 Pepsi bàn 4 khách\nĐiều kiện: 20/12-01/01, đặt fanpage/Zalo, tối đa 100 bàn/ngày\nĐối tượng: 23-38 tuổi, dân văn phòng, nhóm bạn, Q1, Q3, Cầu Giấy\nKênh: Facebook Page, Messenger, Zalo OA, hotline\nKPI: ROAS >=4,5; CPL <=18.000đ; fill rate >=85%",
+    "id": 26
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng founder startup F&B, viết Facebook-native ngắn gọn, sắc nét, chốt insight nhanh. Chỉ viết trong 50-100 từ, ưu tiên hook rõ, naming dễ nhớ, CTA cụ thể, không hype rỗng.",
+    "title": "Viết post Facebook định vị & naming món mới cho Lẩu Phố Buffet — ra mắt combo buffet nhóm dễ nhớ, dễ chốt bàn.",
+    "seed": "Thương hiệu: Lẩu Phố Buffet, 8 chi nhánh TP.HCM\nSản phẩm: Buffet Team Up, combo 4 người, 90 phút\nGiá: 699.000đ (gốc 799.000đ, -13%)\nĐiều kiện: T2-T6, đặt bàn Facebook, 30 suất/ngày\nĐối tượng: 23-35 tuổi, dân văn phòng, Q1 Q3 Bình Thạnh\nKênh: Facebook Page, Messenger, Zalo OA\nKPI: CTR >=3%, booking >=40 bàn/tuần",
+    "id": 27
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết Facebook-native cho chiến dịch GDN/banner ngành cà phê take-away, giọng chuyên nghiệp như agency, rõ lợi ích và ưu đãi. Output ngắn gọn, dễ quét, bám sát seed, CTA cụ thể, KHÔNG hype rỗng hoặc bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook cho BeanGo Coffee — combo Cold Brew take-away giảm 30% giờ sáng.",
+    "seed": "Thương hiệu: BeanGo Coffee — cà phê take-away, 12 kiosk, TP.HCM\nSản phẩm: Combo 2 Cold Brew 500ml, pha arabica, ít ngọt\nGiá: 69.000đ (gốc 99.000đ, -30%), freeship 2km\nĐiều kiện: 6h-10h, T2-T6, đặt GrabFood, giới hạn 80 combo/ngày\nĐối tượng: 22-35 tuổi, dân văn phòng, Q1, Q3, Phú Nhuận\nKênh: Facebook Page, GDN banner, GrabFood\nKPI: CTR ≥ 2,5%, ROAS ≥ 4",
+    "id": 28
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng director marketing F&B dày dạn, viết Facebook-native ngắn gọn 50-100 từ, ưu tiên hook rõ và CTA dứt khoát. Bám sát seed, không hype rỗng, không bịa claim hay thông tin ngoài dữ liệu.",
+    "title": "Viết caption Facebook mời food reviewer dự sự kiện trải nghiệm Lụa Nếp Mường Vang — thử OCOP Hòa Bình bản giới hạn.",
+    "seed": "Thương hiệu: Lụa Nếp Mường Vang — OCOP 4 sao, 3 điểm bán Hà Nội\nSản phẩm: Combo thử 5 món nếp đặc sản, set 650g\nGiá: Vé 99.000đ (gốc 149.000đ, -34%), tặng 1 phần thử\nĐiều kiện: 19-21h 24/06, tại Ba Đình, giới hạn 40 khách\nĐối tượng: reviewer 22-35, food creator Hà Nội\nKênh: Facebook Page, inbox, Zalo OA\nKPI: 15 KOL đăng ký, CTR ≥ 2,8%",
+    "id": 29
+  },
+  {
+    "instruction": "Bạn là copywriter marketing F&B người Việt, giọng director marketing dày dạn, viết Facebook-native để brief kịch bản video TikTok cho quán nhậu/beer club. Giữ câu ngắn, hook rõ, ưu tiên insight đi nhậu theo nhóm và CTA cụ thể, KHÔNG hype rỗng hay bịa claim ngoài seed.",
+    "title": "Viết post Facebook brief kịch bản video TikTok cho Bến Bia Beer Club — combo tháp bia + mồi nhậu kéo team sau giờ làm.",
+    "seed": "Thương hiệu: Bến Bia Beer Club, quán nhậu 3 cơ sở, TP.HCM\nSản phẩm: Combo Tháp Bia 3L + mực nướng + khoai chiên\nGiá: 499.000đ (gốc 649.000đ, -23%)\nĐiều kiện: 17h-20h T2-T5, đặt bàn fanpage, giới hạn 30 combo/ngày\nĐối tượng: 24-35 tuổi, dân văn phòng, Q1,Q3,Phú Nhuận\nKênh: Facebook Page, TikTok, Messenger, Zalo OA\nKPI: CTR ≥ 2,8%, CPL ≤ 18.000đ, ROAS ≥ 3.2",
+    "id": 30
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng founder startup F&B, viết Facebook-native ngắn gọn 50-100 từ, hook nhanh, CTA rõ. Chỉ bám seed, không hype rỗng, không bịa ưu đãi hay claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook cho combo Valentine của Chicky Pop — burger gà rán đôi giá mềm cho cặp đôi.",
+    "seed": "Thương hiệu: Chicky Pop — gà rán burger, 6 cửa hàng TP.HCM\nSản phẩm: Combo Valentine — 2 burger gà + 2 khoai + 2 Pepsi\nGiá: 159.000đ (gốc 219.000đ, -27%), freeship 2km\nĐiều kiện: 10-14/2, GrabFood hoặc inbox, giới hạn 80 combo/ngày\nĐối tượng: 18-30 tuổi, cặp đôi, sinh viên-văn phòng TP.HCM\nKênh: Facebook Page, Messenger, GrabFood\nKPI: CTR ≥ 3,5%, GMV ≥ 25 triệu",
+    "id": 31
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết Facebook-native ngắn gọn 50-100 từ. Bám sát seed, hook rõ, CTA cụ thể, không hype rỗng, không bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook cho activation tại điểm bán của Dalat Milk Yogurt — check-in nhận quà dùng thử cuối tuần.",
+    "seed": "Thương hiệu: Dalat Milk — sữa chua uống, 12 kiosk TP.HCM\nSản phẩm: Yogurt Drink 180ml, 3 vị dâu/xoài/ít đường\nGiá: 19.000đ/chai, mua 2 tặng 1, không freeship\nĐiều kiện: T7-CN, tại kiosk, check-in FB, quà 100 suất/ngày\nĐối tượng: 18-30 tuổi, SV-văn phòng, Q1 Q3 Phú Nhuận\nKênh: Facebook Page, event booth, Zalo OA\nKPI: 300 check-in, CTR ≥ 2.5%",
+    "id": 32
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết Facebook-native cho bài trong content calendar F&B dài 250-400 từ. Bám sát seed, ưu tiên hook rõ, ý ngắn, CTA cụ thể; lồng KPI, ngân sách và đo lường thực chiến, KHÔNG bịa claim ngoài dữ liệu.",
+    "title": "Viết bài Facebook content calendar cho Sữa chua uống Yomi Day — combo 7 chai giá mềm, hook chăm bụng nhẹ ví.",
+    "seed": "Thương hiệu: Yomi Day — sữa chua, 12 kiosk TP.HCM\nSản phẩm: Combo 7 chai sữa chua uống 180ml/chai\nGiá: 79.000đ (gốc 105.000đ, -25%), freeship 2km\nĐiều kiện: 1-15/7, đặt inbox FB, GrabFood, giới hạn 80 combo/ngày\nĐối tượng: 22-34 tuổi, NVVP, mẹ trẻ, Q1,Q3,PN,BT\nKênh: Facebook Page, Messenger, GrabFood, Zalo OA\nKPI: CTR ≥3,2%, CPL ≤9.000đ, ngân sách 12 triệu",
+    "id": 33
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng chuyên nghiệp như agency, viết Facebook-native cho chiến dịch app push F&B, đoạn ngắn, rõ lợi ích, CTA cụ thể. Bám sát seed, không bịa claim, ưu tiên số liệu vận hành và thông điệp thúc đẩy chuyển đổi.",
+    "title": "Viết caption Facebook cho app push của Bếp Nhà Đông Lạnh — combo tiện bữa tối giảm sâu, chốt đơn nhanh.",
+    "seed": "Thương hiệu: Bếp Nhà Đông Lạnh — thực phẩm đông lạnh, 12 điểm bán HN\nSản phẩm: Combo Bữa Tối Nhanh — 5 món/1,2kg, chế biến 10 phút\nGiá: 169.000đ (gốc 229.000đ, -26%), freeship app từ 149.000đ\nĐiều kiện: 17h-20h, đặt trên app, HN nội thành, 200 combo/ngày\nĐối tượng: 25-40 tuổi, dân văn phòng, ba mẹ trẻ, Cầu Giấy-Hà Đông\nKênh: App push, Facebook Page, Zalo OA\nKPI: CTR push ≥8%, CVR app ≥12%, ROAS ≥4",
+    "id": 34
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng director marketing F&B dày dạn, viết Facebook-native phục vụ chuyển thể GDN/banner, câu ngắn, rõ lợi ích, ưu tiên hook bán hàng và CTA cụ thể. Bám sát seed, không bịa claim, không hype rỗng, tối ưu cho CTR và chuyển đổi.",
+    "title": "Viết caption Facebook cho deal banner cuối tuần của MiniGo Mart — combo nhu yếu phẩm giảm sâu, chốt đơn nhanh.",
+    "seed": "Thương hiệu: MiniGo Mart — siêu thị mini, 12 cửa hàng TP.HCM\nSản phẩm: Combo Gia Đình 5 món — gạo, sữa, mì, dầu ăn, giấy\nGiá: 199.000đ (gốc 259.000đ, -23%), freeship 2km\nĐiều kiện: T6-CN, đặt qua inbox, giới hạn 100 combo/ngày\nĐối tượng: 25-40 tuổi, nội trợ, nhân viên văn phòng nội thành\nKênh: Facebook Page, Messenger, Zalo OA\nKPI: CTR ≥ 2,5%, ROAS ≥ 4",
+    "id": 35
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết Facebook-native giọng founder startup F&B: chân thật, nhanh, rõ lợi ích, không hype rỗng. Viết đoạn 120-200 từ, có hook, nêu sự kiện trải nghiệm và lời mời reviewer/KOC, CTA cụ thể, bám sát seed.",
+    "title": "Viết caption Facebook mời food reviewer tham gia buổi trải nghiệm cà phê take-away của Bản Cà Phê — thử cold brew mới trước ngày mở bán.",
+    "seed": "Thương hiệu: Bản Cà Phê — cà phê take-away, 3 điểm bán Hà Nội\nSản phẩm: Cold Brew Cam Quế 500ml, Arabica Đà Lạt\nGiá: 39.000đ (gốc 49.000đ, -20%), không freeship\nĐiều kiện: 18-20h 28/05, tại Cầu Giấy, 30 suất đăng ký\nĐối tượng: 20-32 tuổi, dân văn phòng, Cầu Giấy-Ba Đình\nKênh: Facebook Page, Instagram, Zalo OA\nKPI: 15 reviewer tham gia, 20 bài UGC",
+    "id": 36
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết caption Facebook cho activation tại điểm bán ngành bakery với giọng chuyên nghiệp như agency, Facebook-native, câu ngắn gọn, rõ lợi ích. Bài 120-200 từ, có hook, thông tin ưu đãi, CTA cụ thể và tuyệt đối chỉ bám seed, không bịa claim.",
+    "title": "Viết caption Facebook cho activation tại điểm bán của Lune Bakery — check-in nhận tart mini cuối tuần.",
+    "seed": "Thương hiệu: Lune Bakery, tiệm bánh ngọt, 3 cửa hàng TP.HCM\nSản phẩm: Tart Mini Day, set 2 tart 120g\nGiá: 49.000đ (gốc 69.000đ, -29%)\nĐiều kiện: T7-CN, mua tại quầy, 100 set/ngày\nĐối tượng: 22-34 tuổi, dân văn phòng, Q1-Q3\nKênh: Facebook Page, Instagram, Zalo OA\nKPI: CTR >= 2.8%, GMV >= 15 triệu",
+    "id": 37
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết caption Instagram cho thương hiệu F&B với giọng director marketing dày dạn: sắc, chắt lọc, Facebook/Instagram-native, ưu tiên insight mua nhanh và CTA rõ. Output 250-400 từ, đoạn ngắn dễ đọc, bám sát seed, không bịa claim ngoài dữ liệu; có thể lồng chỉ số marketing như CTR, CPL, ROAS, GMV, AOV, retention khi phù hợp.",
+    "title": "Viết caption Instagram cho ChillTea Go — trà ô long đào chai RTD mới, hook giải nhiệt tiện mang đi.",
+    "seed": "Thương hiệu: ChillTea Go — RTD trà chai, 12 điểm bán, TP.HCM\nSản phẩm: Ô long đào 450ml, ít ngọt, uống lạnh\nGiá: 24.000đ (gốc 29.000đ, -17%), combo 3 chai 69.000đ\nĐiều kiện: 10 ngày, mua tại quầy hoặc ShopeeFood, giới hạn 200 chai/ngày\nĐối tượng: 18-30 tuổi, dân văn phòng, sinh viên, Q1 Q3 Bình Thạnh\nKênh: Instagram, Facebook Page, ShopeeFood, GrabFood\nKPI: CTR ≥ 2,8%, ROAS ≥ 3,5, GMV ≥ 120 triệu",
+    "id": 38
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng founder startup F&B, viết Facebook-native theo dạng báo cáo hiệu quả ngắn gọn, rõ số liệu, có insight và hướng tối ưu. Output 120-200 từ, đoạn ngắn, thực tế, KHÔNG hype rỗng, KHÔNG bịa claim ngoài seed.",
+    "title": "Viết post Facebook báo cáo hiệu quả tuần cho Herb & Co Detox Tea — chốt insight tăng CTR, giữ ROAS.",
+    "seed": "Thương hiệu: Herb & Co — trà detox, 4 kiosk TP.HCM\nSản phẩm: Cold Brew Detox 500ml, 3 vị thảo mộc ít ngọt\nGiá: 29.000đ/chai, combo 3 chai 79.000đ, freeship 2km\nĐiều kiện: 7 ngày, GrabFood+inbox, tối đa 80 combo/ngày\nĐối tượng: 22-34 tuổi, dân văn phòng, Q1-Q3-Phú Nhuận\nKênh: Facebook Page, Messenger, GrabFood\nKPI: CTR 3,4%, ROAS 3,1, AOV 92.000đ",
+    "id": 39
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết Facebook-native ngắn gọn 50-100 từ. Hook rõ, câu ngắn, CTA cụ thể, bám sát seed, KHÔNG hype rỗng hay bịa claim.",
+    "title": "Viết caption Facebook khai trương ChillTea Bottle — mua 2 tặng 1 cho trà trái cây RTD.",
+    "seed": "Thương hiệu: ChillTea Bottle — RTD, 1 cửa hàng mới, Q.7 TP.HCM\nSản phẩm: Trà đào cam sả chai 500ml, trà vải hoa hồng 500ml\nGiá: 29.000đ/chai, mua 2 tặng 1, không áp dụng freeship\nĐiều kiện: 3 ngày khai trương, mua tại quầy hoặc inbox, 100 suất/ngày\nĐối tượng: 18-30 tuổi, sinh viên, freelancer, Q.7 và Phú Mỹ Hưng\nKênh: Facebook Page, Messenger, GrabFood\nKPI: CTR ≥ 2,5%, GMV khai trương ≥ 12 triệu",
+    "id": 40
+  },
+  {
+    "instruction": "Bạn là copywriter marketing F&B người Việt, giọng chuyên nghiệp như agency, viết Facebook-native rõ lợi ích và logic giá. Output 120-200 từ, bố cục ngắn gọn, CTA cụ thể, bám sát seed, không bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook cho combo trưa của An Nhiên Vegan Bistro — tối ưu menu engineering với giá neo hấp dẫn.",
+    "seed": "Thương hiệu: An Nhiên Vegan Bistro, nhà hàng chay, 3 CN TP.HCM\nSản phẩm: Combo Trưa Xanh gồm 1 cơm + 1 canh + 1 trà 650g\nGiá: 89.000đ (gốc 119.000đ, -25%), không freeship\nĐiều kiện: 11h-14h T2-T6, GrabFood/Facebook, giới hạn 80 combo/ngày\nĐối tượng: 24-40 tuổi, dân văn phòng, Q1,Q3,Phú Nhuận\nKênh: Facebook Page, Messenger, GrabFood, Zalo OA\nKPI: CTR ≥ 2,8%, AOV ≥ 110.000đ, ROAS ≥ 3,5",
+    "id": 41
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết Facebook-native cho bài chiến lược KOL/KOC foodie ngành cà phê take-away. Output dài 250-400 từ, nêu rõ KPI, phân bổ ngân sách, cách đo lường; bám sát seed, không bịa claim ngoài dữ liệu.",
+    "title": "Viết post Facebook chiến lược KOL/KOC foodie cho Mây Cà Phê — đẩy cold brew take-away giờ sáng.",
+    "seed": "Thương hiệu: Mây Cà Phê — take-away, 8 kiosk TP.HCM\nSản phẩm: Cold Brew 500ml, Arabica Đà Lạt, ít ngọt\nGiá: 39.000đ (gốc 49.000đ, -20%), freeship 2km\nĐiều kiện: 6-10h, T2-T6, GrabFood, 100 đơn/ngày\nĐối tượng: 22-34 tuổi, dân văn phòng Q1, Q3, Phú Nhuận\nKênh: Facebook, KOC foodie, GrabFood, Story cá nhân\nKPI: ROAS >=3.5, CPL <=12.000đ, GMV 60 triệu/14 ngày",
+    "id": 42
+  },
+  {
+    "instruction": "Bạn là copywriter marketing F&B người Việt, viết caption Facebook-native cho chiến dịch Tết với giọng agency chuyên nghiệp, rõ lợi ích, nhịp câu gọn. Output 120-200 từ, có hook, body, CTA cụ thể, bám sát seed và không bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook cho Lộc Nhiên Tea — set trà thảo mộc detox Tết giảm 20% kèm freeship gần cửa hàng.",
+    "seed": "Thương hiệu: Lộc Nhiên Tea — trà thảo mộc, 8 kiosk tại HN\nSản phẩm: Set Detox Tết — 10 chai 350ml, vị atiso-cúc-gừng\nGiá: 219.000đ (gốc 275.000đ, -20%), freeship 4km\nĐiều kiện: 20-29 Tết, đặt Facebook/Zalo, giới hạn 80 set/ngày\nĐối tượng: 25-40 tuổi, dân văn phòng, Cầu Giấy-Ba Đình-Hai Bà\nKênh: Facebook Page, Messenger, Zalo OA\nKPI: CTR ≥ 2.8%, GMV Tết ≥ 60 triệu",
+    "id": 43
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng director marketing F&B dày dạn, viết Facebook-native theo hướng báo cáo hiệu quả rõ số liệu, ngắn gọn và sắc. Output 120-200 từ, có insight, nêu kết quả-khuyến nghị-CTA, KHÔNG hype rỗng, KHÔNG bịa claim ngoài seed.",
+    "title": "Viết post Facebook báo cáo hiệu quả chiến dịch Croissant Box của Bơm Bakery — chốt điểm sáng CTR và doanh thu tuần.",
+    "seed": "Thương hiệu: Bơm Bakery — tiệm bánh ngọt, 4 cửa hàng TP.HCM\nSản phẩm: Croissant Box — hộp 4 bánh bơ, 320g\nGiá: 119.000đ (gốc 149.000đ, -20%), freeship 2km\nĐiều kiện: 7 ngày, đặt qua inbox, giới hạn 40 hộp/ngày\nĐối tượng: 23-35 tuổi, dân văn phòng, Q1, Q3, Phú Nhuận\nKênh: Facebook Page, Messenger, GrabFood\nKPI: CTR 3,4%, ROAS 4,2, GMV 33 triệu",
+    "id": 44
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết Facebook-native cho bài tuyển dụng nhượng quyền F&B dài 250-400 từ. Bám sát seed, nêu rõ lợi ích đầu tư, CTA cụ thể, dùng thuật ngữ marketing chuẩn, KHÔNG bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook tuyển đối tác nhượng quyền cho Bếp Nhà Đông Lạnh — vốn gọn, vào thị trường tiện lợi nhanh.",
+    "seed": "Thương hiệu: Bếp Nhà Đông Lạnh — đồ ăn đông lạnh, 12 điểm bán HN\nSản phẩm: Nhượng quyền kiosk 15-20m2, combo SKU đông lạnh bán nhanh\nGiá: Phí nhượng quyền 99 triệu, setup từ 180 triệu, hỗ trợ POSM\nĐiều kiện: Tuyển Q3/2026, ưu tiên nội thành HN, chốt 10 đối tác\nĐối tượng: 28-45 tuổi, chủ shop, dân văn phòng muốn kinh doanh thêm\nKênh: Facebook Page, Messenger, Zalo OA, form landing page\nKPI: CPL ≤ 120.000đ, 40 lead/tháng, 8 lịch hẹn/tháng",
+    "id": 45
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết Facebook-native cho tuyển dụng nhượng quyền F&B với giọng founder startup: thẳng, thực tế, có số liệu, ít màu mè. Viết 120-200 từ, đoạn ngắn, hook rõ, nêu lợi ích-vận hành-hỗ trợ, CTA cụ thể và không bịa claim ngoài seed.",
+    "title": "Viết caption Facebook tuyển đối tác nhượng quyền Cơm Tấm 1988 — vốn gọn, vào vận hành nhanh.",
+    "seed": "Thương hiệu: Cơm Tấm 1988 — cơm văn phòng/cơm tấm, 6 điểm bán HCM\nSản phẩm: Gói nhượng quyền kiosk 25-35m2, menu 18 món cơm tấm\nGiá: Phí nhượng quyền 99 triệu, setup từ 280 triệu\nĐiều kiện: Tuyển Q3-Q4/2026, ưu tiên HCM, tối đa 10 đối tác\nĐối tượng: 28-45 tuổi, chủ quán nhỏ, dân văn phòng muốn khởi nghiệp\nKênh: Facebook Page, form landing page, Zalo OA\nKPI: CPL ≤ 120.000đ, 40 lead/tháng, 6 lịch hẹn/tháng",
+    "id": 46
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng director marketing F&B dày dạn, viết Facebook-native, lập luận theo logic test-and-learn, ngắn gọn nhưng sắc. Khi triển khai phải bám chặt seed, ưu tiên hook rõ, CTA cụ thể, tuyệt đối không bịa claim ngoài dữ liệu và luôn phản ánh tư duy A/B testing creative, KPI, ngân sách, đo lường.",
+    "title": "Viết caption Facebook A/B testing cho Chill Tea RTD — trà ô long mật đào 450ml với hook giải nhiệt văn phòng, giá mở trial dễ chốt.",
+    "seed": "Thương hiệu: Chill Tea RTD — trà đóng chai, 12 điểm bán HN\nSản phẩm: Ô long mật đào 450ml, chai PET, lốc 6 chai\nGiá: 99.000đ/lốc (gốc 129.000đ, -23%), freeship 2km\nĐiều kiện: 10 ngày, Facebook inbox, giới hạn 80 lốc/ngày\nĐối tượng: 22-34 tuổi, dân văn phòng, Cầu Giấy-Ba Đình\nKênh: Facebook Page, Messenger, ShopeeFood\nKPI: CTR ≥ 2,8%, CPL ≤ 18.000đ, ROAS ≥ 2,5",
+    "id": 47
+  },
+  {
+    "instruction": "Bạn là copywriter marketing F&B người Việt, giọng agency chuyên nghiệp, viết Facebook-native cho bài xử lý khủng hoảng an toàn thực phẩm dài 250-400 từ. Bám sát seed, minh bạch và trấn an, có thông điệp hành động rõ, nêu KPI/đo lường nếu cần, KHÔNG bịa claim hay pháp lý chưa có xác nhận.",
+    "title": "Viết bài Facebook xử lý khủng hoảng cho Burger Hub — minh bạch quy trình sau sự cố an toàn thực phẩm.",
+    "seed": "Thương hiệu: Burger Hub — fast food burger/gà rán, 12 cửa hàng HN\nSản phẩm: Combo Burger Gà Giòn + khoai + Pepsi 500ml\nGiá: Tạm dừng ưu đãi, hỗ trợ hoàn tiền 100% đơn bị ảnh hưởng\nĐiều kiện: 72h phản hồi, áp dụng fanpage/inbox/hotline, rà soát toàn hệ thống\nĐối tượng: 18-34 tuổi, dân văn phòng/sinh viên, HN nội thành\nKênh: Facebook Page, Messenger, hotline, Zalo OA\nKPI: Sentiment dương >60%, CPL inbox <15.000đ, retention 30 ngày >25%",
+    "id": 48
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng chuyên nghiệp kiểu agency, viết Facebook-native ngắn gọn và rõ brief. Chỉ bám seed, nêu đúng lợi ích và CTA, không hype rỗng, không bịa claim ngoài dữ liệu.",
+    "title": "Viết post Facebook brief thiết kế bao bì cho Phở 24 Express — tô mang đi nhận diện mới, gọn và premium.",
+    "seed": "Thương hiệu: Phở 24 Express — chuỗi bún phở, 18 điểm bán HN\nSản phẩm: Bộ bao bì tô phở mang đi 950ml, kèm túi giấy\nGiá: Combo từ 59.000đ, upsell trứng 12.000đ\nĐiều kiện: Brief Q3, áp dụng toàn hệ thống, chốt mẫu trong 10 ngày\nĐối tượng: 22-40 tuổi, dân văn phòng, Cầu Giấy-Ba Đình\nKênh: Facebook Page, Zalo OA, GrabFood\nKPI: CTR ≥ 2,8%, AOV ≥ 72.000đ",
+    "id": 49
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết caption Facebook cho thương hiệu F&B theo giọng chuyên nghiệp như agency, Facebook-native, rõ lợi ích và CTA cụ thể. Nội dung dài 120-200 từ, bám sát seed, không bịa ưu đãi hay claim ngoài dữ liệu đã cho.",
+    "title": "Viết caption Facebook cho chương trình thành viên của Xiên Vui — tích 5 xiên tặng 1, kéo khách quay lại.",
+    "seed": "Thương hiệu: Xiên Vui — đồ ăn vặt, 8 xe đẩy tại TP.HCM\nSản phẩm: Thẻ thành viên Xiên Vui — tích 5 xiên tặng 1 xiên\nGiá: Miễn phí đăng ký, không phí duy trì, áp dụng mọi combo\nĐiều kiện: 1/6-30/6, mua tại quầy, mỗi bill tích 1 lần\nĐối tượng: 16-28 tuổi, học sinh-sinh viên, Q1 Q3 Bình Thạnh\nKênh: Facebook Page, Zalo OA, tại quầy\nKPI: Retention 25%, 800 member mới/tháng",
+    "id": 50
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết caption Facebook-native dài 250-400 từ, đoạn ngắn, rõ hook, lợi ích, CTA cụ thể. Chỉ dùng dữ kiện trong seed, không bịa claim; ưu tiên ngôn ngữ bán hàng thực chiến, có tư duy CPL, CTR, ROAS, GMV và đo lường rõ.",
+    "title": "Viết caption Facebook cho Mộc Châu Quà Núi — combo đặc sản OCOP Tây Bắc làm quà, chốt đơn mùa cuối tuần.",
+    "seed": "Thương hiệu: Mộc Châu Quà Núi — đặc sản OCOP, 3 điểm bán Hà Nội\nSản phẩm: Combo OCOP Tây Bắc — 4 món, hộp quà 1,2kg\nGiá: 289.000đ (gốc 349.000đ, -17%), freeship 5km\nĐiều kiện: T6-CN, inbox Page, giới hạn 80 hộp/ngày\nĐối tượng: 25-40 tuổi, dân văn phòng, Cầu Giấy-Hà Đông\nKênh: Facebook Page, Messenger, Zalo OA\nKPI: CTR ≥ 2,8%, ROAS ≥ 3,5, ngân sách 3 triệu/3 ngày",
+    "id": 51
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng founder startup F&B, viết súc tích 50-100 từ, thực tế, có góc nhìn vận hành. Ưu tiên văn phong Facebook-native, câu ngắn, hook rõ, không hype rỗng, không bịa claim ngoài seed.",
+    "title": "Viết bài Facebook ngắn cho Phở Nhanh 24 — combo bún bò trưa văn phòng giảm 20%.",
+    "seed": "Thương hiệu: Phở Nhanh 24 — chuỗi bún phở, 8 điểm bán Hà Nội\nSản phẩm: Combo bún bò trưa — 1 tô 650g + trà chanh 350ml\nGiá: 79.000đ (gốc 99.000đ, -20%), freeship 2km\nĐiều kiện: 11h-14h T2-T6, GrabFood, giới hạn 80 combo/ngày\nĐối tượng: 22-35 tuổi, dân văn phòng, Cầu Giấy, Đống Đa\nKênh: Facebook Page, GrabFood, Zalo OA\nKPI: CTR ≥ 2,8%, GMV trưa ≥ 12 triệu",
+    "id": 52
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng director marketing F&B dày dạn, viết Facebook-native theo tư duy định vị & naming, lập luận sắc, ít tính từ rỗng. Output dài 250-400 từ, đoạn ngắn, có hook, nêu rõ insight, USP, CTA mềm và bám tuyệt đối vào seed; ưu tiên ngôn ngữ vận hành được, có KPI, ngân sách, đo lường cụ thể nếu phù hợp nhưng không bịa claim ngoài dữ liệu.",
+    "title": "Viết bài Facebook định vị & naming món mới cho Bão Bia Beer Club — combo mồi nhậu dễ nhớ, hook tụ tập sau giờ làm.",
+    "seed": "Thương hiệu: Bão Bia Beer Club, 3 điểm, Q1-Q7-Phú Nhuận, TP.HCM\nSản phẩm: Combo Mồi Bão 4 món/2-3 người, tên cần test A/B\nGiá: 299.000đ, tặng 1 tháp bia 1,5L cho 30 combo đầu\nĐiều kiện: 17:00-20:00, T2-T5, dùng tại chỗ, 40 combo/ngày\nĐối tượng: 24-38 tuổi, dân văn phòng, sales, agency, Q1-Q4-Q7\nKênh: Facebook Page, Reels, Messenger, Zalo OA\nKPI: CTR ≥3,5%, CPL ≤18.000đ, ROAS ≥3",
+    "id": 53
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng director marketing F&B dày dạn, viết Facebook-native nhưng tư duy blog SEO, câu ngắn, rõ insight, không hype rỗng. Output 120-200 từ, bám sát seed, có hook, lợi ích chính và CTA cụ thể, không bịa claim ngoài dữ liệu.",
+    "title": "Viết bài Facebook cho Urban Bean Coffee — combo cà phê take-away sáng đi làm giảm 20%.",
+    "seed": "Thương hiệu: Urban Bean Coffee — take-away, 8 điểm bán, TP.HCM\nSản phẩm: Morning Combo — 1 cà phê sữa 500ml + 1 croissant 60g\nGiá: 55.000đ (gốc 69.000đ, -20%), freeship 2km\nĐiều kiện: 6h30-10h, T2-T6, GrabFood/inbox, giới hạn 80 combo/ngày\nĐối tượng: 22-35 tuổi, dân văn phòng, Q1, Q3, Bình Thạnh\nKênh: Facebook Page, GrabFood, Messenger\nKPI: CTR ≥ 2,8%, GMV sáng ≥ 12 triệu",
+    "id": 54
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết kế hoạch livestream Facebook cho chuỗi pizza với giọng agency chuyên nghiệp, Facebook-native, ưu tiên logic triển khai và CTA rõ. Bám sát seed, không bịa claim ngoài dữ liệu, khi phát triển content dài 250-400 từ phải có KPI, ngân sách và cách đo lường cụ thể.",
+    "title": "Viết kế hoạch livestream Facebook cho Roma Pizza — combo 2 bánh giảm sâu, chốt đơn giờ vàng.",
+    "seed": "Thương hiệu: Roma Pizza — chuỗi pizza, 12 cửa hàng TP.HCM\nSản phẩm: Combo 2 pizza cỡ M + 2 Pepsi 390ml\nGiá: 239.000đ (gốc 329.000đ, -27%), freeship 4km\nĐiều kiện: 19h-21h T6, chốt qua inbox, 200 combo\nĐối tượng: 22-35 tuổi, dân văn phòng, Q1 Q3 Bình Thạnh\nKênh: Facebook Page, Messenger, GrabFood, Zalo OA\nKPI: 20.000 view live, CPL ≤ 18.000đ, ROAS ≥ 3.5",
+    "id": 55
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng director marketing F&B dày dạn, viết Facebook-native ngắn gọn, sắc và có góc định vị rõ. Chỉ viết trong 50-100 từ, ưu tiên naming hook, lợi ích cảm xúc và CTA test phản hồi, không hype rỗng.",
+    "title": "Viết post Facebook định vị & naming sản phẩm mới cho Lila Bakery — hộp bánh ngọt mini với hook “tự thưởng sau giờ làm”.",
+    "seed": "Thương hiệu: Lila Bakery — tiệm bánh ngọt, 3 cửa hàng, TP.HCM\nSản phẩm: Hộp bánh mini 4 vị, 280g, cần chốt tên gọi chủ đạo\nGiá: dự kiến 119.000đ, combo test giá, chưa áp dụng giảm giá\nĐiều kiện: pre-launch 7 ngày, lấy vote tên qua Facebook, giới hạn 100 box\nĐối tượng: 22-34 tuổi, dân văn phòng, Q1-Q3-Phú Nhuận\nKênh: Facebook Page, Story, Messenger\nKPI: 300 comment vote tên, CTR inbox ≥ 2,5%",
+    "id": 56
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết Facebook-native cho founder chuỗi cà phê tầm trung: giọng startup rõ chiến lược, thực chiến, có số liệu, ưu tiên insight và định hướng tăng trưởng. Khi triển khai bài 250-400 từ, đoạn ngắn, hook thẳng vấn đề, nêu KPI, ngân sách, đo lường cụ thể, CTA rõ; KHÔNG hype rỗng, KHÔNG bịa claim ngoài seed.",
+    "title": "Viết bài Facebook chiến lược thương hiệu cho Urban Bean Coffee — định vị chuỗi cà phê tầm trung tăng tần suất ghé quán.",
+    "seed": "Thương hiệu: Urban Bean Coffee, chuỗi cà phê 12 cửa hàng, TP.HCM\nSản phẩm: combo sáng cà phê 16oz + bánh, 1 phần/người\nGiá: 59.000đ (gốc 75.000đ, -21%), freeship 2km\nĐiều kiện: 6h30-10h, T2-T6, app/inbox, 100 combo/ngày\nĐối tượng: 22-35 tuổi, dân văn phòng, Q1,Q3,Phú Nhuận\nKênh: Facebook, Instagram, GrabFood, Zalo OA\nKPI: ROAS >=3.5, CPL <=18.000đ, GMV tháng >=450 triệu",
+    "id": 57
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng director marketing F&B dày dạn, viết Facebook-native mạch lạc, thực dụng, ít tính từ rỗng. Output 120-200 từ, có hook, lợi ích rõ, CTA cụ thể, bám sát seed và không bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook cho Tết An Gia Foods — Combo lẩu viên sum vầy, chốt đơn nhanh dịp Tết.",
+    "seed": "Thương hiệu: An Gia Foods — đồ đông lạnh, 12 điểm bán, HN\nSản phẩm: Combo lẩu viên Tết — 1,2kg, 4 vị\nGiá: 179.000đ (gốc 239.000đ, -25%), freeship 5km\nĐiều kiện: 20-29 Tết, đặt FB/Zalo, giới hạn 100 combo/ngày\nĐối tượng: 25-40 tuổi, gia đình trẻ, nội thành Hà Nội\nKênh: Facebook Page, Messenger, Zalo OA\nKPI: CTR ≥ 3,2%, GMV ≥ 120 triệu",
+    "id": 58
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng chuyên nghiệp như agency, viết Facebook-native cho chiến dịch push app ngành sữa/sữa chua. Output đoạn ngắn 120-200 từ, hook rõ, lợi ích cụ thể, CTA trực diện, không hype rỗng và không bịa claim ngoài seed.",
+    "title": "Viết caption Facebook cho push app của Dalat Milk Yogurt — combo sữa chua uống giảm nhanh giờ vàng.",
+    "seed": "Thương hiệu: Dalat Milk Yogurt — sữa chua, 12 cửa hàng TP.HCM\nSản phẩm: Combo 4 sữa chua uống 180ml vị dâu và việt quất\nGiá: 52.000đ (gốc 68.000đ, -24%), freeship 2km\nĐiều kiện: 17h-20h, đặt trên app, tối đa 2 combo/đơn\nĐối tượng: 23-35 tuổi, dân văn phòng, Q1, Q3, Bình Thạnh\nKênh: App brand, Facebook Page, Zalo OA\nKPI: CTR push ≥ 4%, ROAS ≥ 3.5",
+    "id": 59
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết theo giọng founder startup F&B: thực tế, nhanh gọn, có insight vận hành và value rõ ràng. Tạo nội dung Facebook-native có cấu trúc mạch lạc, 120-200 từ, CTA cụ thể, không hype rỗng, không bịa claim ngoài seed.",
+    "title": "Viết bài Facebook cho buffet nướng Seoul Table — lunch buffet 199.000đ, chốt kèo dân văn phòng.",
+    "seed": "Thương hiệu: Seoul Table — buffet nướng, 3 chi nhánh Hà Nội\nSản phẩm: Lunch Buffet 90 phút, 40 món, refill tại bàn\nGiá: 199.000đ (gốc 259.000đ, -23%), chưa gồm nước\nĐiều kiện: T2-T6 11h-14h, đặt page/inbox, 30 suất/ngày\nĐối tượng: 23-35 tuổi, dân văn phòng, Cầu Giấy-Ba Đình\nKênh: Facebook Page, Messenger, Zalo OA\nKPI: CTR ≥ 2,8%, CPL ≤ 18.000đ",
+    "id": 60
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết như founder startup F&B: thẳng, thực tế, Facebook-native, ưu tiên rõ offer và logic vận hành. Viết bài dài 250-400 từ, bám sát seed, có hook, lợi ích, CTA cụ thể; tuyệt đối không bịa claim ngoài dữ liệu và nên lồng KPI, ngân sách, đo lường theo góc nhìn tăng trưởng.",
+    "title": "Viết caption Facebook cho BentoHub Kitchen — combo cơm trưa văn phòng freeship 3km, chốt đơn qua Zalo OA.",
+    "seed": "Thương hiệu: BentoHub Kitchen — cloud kitchen, 1 bếp trung tâm, TP.HCM\nSản phẩm: Combo cơm trưa 2 món + canh, suất 650g\nGiá: 69.000đ (gốc 89.000đ, -22%), freeship 3km\nĐiều kiện: 10h-13h T2-T6, đặt Zalo OA, giới hạn 80 suất/ngày\nĐối tượng: 22-35 tuổi, dân văn phòng, Q1-Q3-Phú Nhuận\nKênh: Facebook Page, Zalo OA, GrabFood\nKPI: CTR ≥ 2,8%, CPL ≤ 12.000đ, GMV ≥ 25 triệu/tháng",
+    "id": 61
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết Facebook-native ngắn gọn 50-100 từ cho bài báo cáo & phân tích hiệu quả. Bám sát seed, ưu tiên số liệu rõ ràng, nêu insight ngắn và tránh hype rỗng.",
+    "title": "Viết post Facebook báo cáo hiệu quả cho Mộc Châu Food — combo đặc sản OCOP chốt insight sau 7 ngày chạy",
+    "seed": "Thương hiệu: Mộc Châu Food — đặc sản OCOP, 3 điểm bán, Hà Nội\nSản phẩm: Combo OCOP Mộc Châu — 4 món, hộp quà 1,2kg\nGiá: 219.000đ (gốc 279.000đ, -22%), freeship 5km\nĐiều kiện: 7 ngày, đặt qua inbox, giới hạn 40 combo/ngày\nĐối tượng: 25-40 tuổi, dân văn phòng, Cầu Giấy, Hà Đông\nKênh: Facebook Page, Messenger, Zalo OA\nKPI: CTR 3,2%, ROAS 4,1, GMV 61 triệu",
+    "id": 62
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết caption Facebook cho F&B giọng chuyên nghiệp như agency, Facebook-native, rõ benefit và CTA cụ thể. Output 120-200 từ, đoạn ngắn, bám sát seed, KHÔNG bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook ra mắt cơm nắm Onigiri Salmon Mayo của Circle K — tiện bữa nhanh 24/7.",
+    "seed": "Thương hiệu: Circle K — cửa hàng tiện lợi 24/7, 400+ điểm, TP.HCM\nSản phẩm: Onigiri Salmon Mayo — cơm nắm 120g, ăn liền\nGiá: 19.000đ (gốc 25.000đ, -24%), không freeship\nĐiều kiện: 7 ngày đầu, mua tại cửa hàng, tối đa 2 sp/hóa đơn\nĐối tượng: 18-30 tuổi, sinh viên, dân văn phòng, Q1-Q7\nKênh: Facebook Page, Instagram, Zalo OA\nKPI: CTR ≥ 2,8%, GMV tuần đầu ≥ 60 triệu",
+    "id": 63
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng director marketing F&B dày dạn, viết Facebook-native cho bài tuyển dụng nhượng quyền. Output 120-200 từ, đoạn ngắn, nêu rõ lợi ích đầu tư, điều kiện hợp tác, CTA cụ thể, không hype rỗng, không bịa claim ngoài seed.",
+    "title": "Viết caption Facebook tuyển đối tác nhượng quyền cho Green Press Juice — mô hình healthy bar vốn gọn, hoàn vốn nhanh.",
+    "seed": "Thương hiệu: Green Press Juice — juice bar, 8 điểm bán, TP.HCM\nSản phẩm: Nhượng quyền kiosk nước ép & smoothie 20-35m2\nGiá: Phí nhượng quyền từ 180 triệu, miễn phí đào tạo khai trương\nĐiều kiện: Tuyển Q3/2026, ưu tiên HCM-HN, nhận 10 đối tác đầu tiên\nĐối tượng: 28-45 tuổi, chủ shop, nhà đầu tư nhỏ, dân văn phòng\nKênh: Facebook Page, Zalo OA, landing page, hotline\nKPI: 60 lead/tháng, CPL ≤ 120.000đ, CTR ≥ 2,5%",
+    "id": 64
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt cho F&B, viết Facebook Ads giọng chuyên nghiệp như agency, Facebook-native, câu ngắn, rõ lợi ích. Bám sát seed, ưu tiên hook bán hàng và CTA cụ thể, không hype rỗng, không bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook Ads cho Bếp Nhà Nhanh — combo cơm trưa văn phòng freeship giờ trưa.",
+    "seed": "Thương hiệu: Bếp Nhà Nhanh — cloud kitchen, 1 bếp, Hà Nội\nSản phẩm: Combo cơm trưa văn phòng 2 món + canh\nGiá: 69.000đ (gốc 89.000đ, -22%), freeship 3km\nĐiều kiện: 11h-13h T2-T6, đặt qua inbox, giới hạn 80 combo/ngày\nĐối tượng: 23-35 tuổi, dân văn phòng, Cầu Giấy-Ba Đình\nKênh: Facebook Page, Messenger, GrabFood\nKPI: CTR ≥ 2,8%, CPL ≤ 18.000đ",
+    "id": 65
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng director marketing F&B dày dạn, viết phản hồi review tiêu cực theo kiểu Facebook-native, điềm tĩnh, có trách nhiệm và hướng xử lý rõ. Output 120-200 từ, đoạn ngắn, ưu tiên xin lỗi đúng mức, nêu phương án khắc phục, CTA inbox cụ thể, KHÔNG tranh cãi hay hứa vượt seed.",
+    "title": "Viết phản hồi Facebook cho review tiêu cực của Bếp Nhà An — combo há cảo tôm bị giao rã đông.",
+    "seed": "Thương hiệu: Bếp Nhà An — đồ đông lạnh, 12 điểm bán HN\nSản phẩm: Combo há cảo tôm 500g, 24 viên/túi\nGiá: 89.000đ (gốc 109.000đ, -18%), chưa freeship\nĐiều kiện: Review phát sinh tuần 20-26/5, xử lý qua inbox Page\nĐối tượng: 25-40 tuổi, dân văn phòng, Cầu Giấy-Ba Đình\nKênh: Facebook Page, Messenger, ShopeeFood\nKPI: SLA inbox <15p, retention khách lỗi ≥ 60%",
+    "id": 66
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết Facebook-native cho specialty coffee. Viết bài 250-400 từ, bám sát seed, ưu tiên menu engineering & pricing, nêu KPI, ngân sách, đo lường cụ thể, CTA rõ, không hype rỗng.",
+    "title": "Viết caption Facebook cho Lặng Bean Coffee — đẩy combo cold brew và tối ưu giá trị đơn giữa tuần.",
+    "seed": "Thương hiệu: Lặng Bean Coffee — specialty, 3 quán, TP.HCM\nSản phẩm: Combo Cold Brew 500ml + croissant bơ 70g\nGiá: 89.000đ (gốc 109.000đ, -18%), freeship 2km\nĐiều kiện: T2-T6 14h-17h, GrabFood/inbox, 40 combo/ngày\nĐối tượng: 23-35 tuổi, freelancer, Q1-Q3-Phú Nhuận\nKênh: Facebook Page, Messenger, GrabFood, Zalo OA\nKPI: AOV ≥ 95.000đ, ROAS ≥ 3,5, ngân sách 6 triệu/10 ngày",
+    "id": 67
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết kế hoạch livestream Facebook cho thương hiệu F&B giọng chuyên nghiệp như agency, Facebook-native, câu ngắn, rõ ưu đãi và kịch bản chốt đơn. Bám sát seed, không bịa claim ngoài dữ liệu, output thực dụng, có CTA cụ thể.",
+    "title": "Viết kế hoạch livestream Facebook cho Bếp Quê OCOP — chốt deal combo đặc sản miền Tây, quà live giới hạn.",
+    "seed": "Thương hiệu: Bếp Quê OCOP — đặc sản miền Tây, 3 điểm bán Cần Thơ\nSản phẩm: Combo khô cá lóc + mắm chưng 700g\nGiá: 179.000đ (gốc 229.000đ, -22%), freeship 5km\nĐiều kiện: 20h Thứ 6, Facebook Live, giới hạn 100 combo\nĐối tượng: 28-45 tuổi, nội trợ, văn phòng, Cần Thơ\nKênh: Facebook Page, Messenger, Zalo OA\nKPI: 120 đơn/live, CTR inbox ≥ 4%",
+    "id": 68
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết Facebook-native cho bài tuyển dụng F&B giọng chuyên nghiệp như agency, ngắn gọn 50-100 từ. Bám sát seed, nêu rõ quyền lợi và CTA ứng tuyển, không hype rỗng, không bịa thông tin ngoài dữ liệu.",
+    "title": "Viết caption Facebook tuyển barista cho Bánh Kẹo Lộc Việt — ca linh hoạt, thu nhập rõ ràng.",
+    "seed": "Thương hiệu: Lộc Việt Snacks — bánh kẹo, 12 cửa hàng Hà Nội\nSản phẩm: Tuyển barista full-time/part-time tại kiosk đồ uống\nGiá: Lương 24-32k/giờ, phụ cấp gửi xe, thưởng KPI\nĐiều kiện: 18-28 tuổi, xoay ca, ưu tiên có kinh nghiệm\nĐối tượng: SV, người mới đi làm tại Cầu Giấy, Đống Đa, Hà Đông\nKênh: Facebook Page, Messenger, Zalo OA\nKPI: CPL ≤ 35.000đ, 40 hồ sơ/14 ngày",
+    "id": 69
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng director marketing F&B dày dạn, viết Facebook-native ngắn gọn 50-100 từ, hook rõ và CTA cụ thể. Chỉ bám fact trong seed, không hype rỗng, không bịa ưu đãi hay claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook ra mắt món mới cho Xiên Nướng Chị Mười — Combo Xiên Sốt Me với hook ăn vặt tan ca giá dễ chốt.",
+    "seed": "Thương hiệu: Xiên Nướng Chị Mười — ăn vặt, 3 điểm bán, TP.HCM\nSản phẩm: Combo Xiên Sốt Me — 5 xiên, 420g\nGiá: 59.000đ (gốc 75.000đ, -21%), freeship 2km\nĐiều kiện: 7 ngày đầu, GrabFood/inbox, giới hạn 80 combo/ngày\nĐối tượng: 18-30 tuổi, sinh viên, NVVP, Q1-Q3-Bình Thạnh\nKênh: Facebook Page, GrabFood, Messenger\nKPI: CTR ≥ 3,5%, GMV launch ≥ 15 triệu",
+    "id": 70
+  },
+  {
+    "instruction": "Bạn là copywriter marketing F&B người Việt, giọng chuyên nghiệp như agency, viết Facebook-native ngắn gọn 50-100 từ. Bám sát seed, nêu ưu đãi rõ ràng, CTA cụ thể, không hype rỗng, không bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook cho An Nhiên Chay — set lunch thuần chay giảm 20% cho dân văn phòng.",
+    "seed": "Thương hiệu: An Nhiên Chay — nhà hàng thuần chay, 3 chi nhánh TP.HCM\nSản phẩm: Set lunch thuần chay 1 người gồm 1 món chính + 1 nước\nGiá: 89.000đ (gốc 109.000đ, -20%), freeship 2km\nĐiều kiện: T2-T6 10h-14h, đặt qua inbox, giới hạn 40 set/ngày\nĐối tượng: 24-40 tuổi, dân văn phòng, Q1, Q3, Phú Nhuận\nKênh: Facebook Page, Messenger, Zalo OA\nKPI: CTR ≥ 2,8%, CPL ≤ 18.000đ",
+    "id": 71
+  },
+  {
+    "instruction": "Bạn là copywriter marketing F&B người Việt, viết Facebook-native cho tình huống crisis PR, giọng chuyên nghiệp như agency, minh bạch và trấn an. Output 120-200 từ, đoạn ngắn rõ ý, nêu hành động xử lý cụ thể, CTA cập nhật thông tin, KHÔNG biện minh dài dòng hay hype rỗng.",
+    "title": "Viết bài Facebook xử lý khủng hoảng cho Mộc Nhiên Herbal Tea — minh bạch quy trình sau sự cố an toàn thực phẩm.",
+    "seed": "Thương hiệu: Mộc Nhiên Herbal Tea — trà thảo mộc, 12 kiosk, TP.HCM\nSản phẩm: Detox 7 Vị — chai 350ml, trà thảo mộc ít ngọt\nGiá: 29.000đ/chai, combo 3 chai 79.000đ, không đổi giá\nĐiều kiện: Ra thông báo trong 24h, tạm ngưng 1 lô, đổi trả 7 ngày\nĐối tượng: 23-38 tuổi, dân văn phòng, Q1,Q3,Phú Nhuận\nKênh: Facebook Page, Zalo OA, GrabFood, ShopeeFood\nKPI: Sentiment dương ≥70%, retention 30 ngày ≥25%",
+    "id": 72
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng founder startup F&B, viết Facebook-native rõ insight, ngắn gọn nhưng có chiều sâu vận hành. Khi triển khai từ seed, bám sát dữ kiện, nêu brief bao bì theo góc nhìn bán hàng, có KPI, ngân sách, đo lường cụ thể, KHÔNG bịa claim ngoài seed.",
+    "title": "Viết post Facebook brief thiết kế bao bì cho ChillTea RTD Kombucha — chốt concept chai mới để tăng trial trên kênh online.",
+    "seed": "Thương hiệu: ChillTea RTD kombucha, 12 điểm bán, TP.HCM\nSản phẩm: Kombucha chai 330ml, vị đào ô long\nGiá: 29.000đ/chai (gốc 35.000đ, -17%), combo 6 freeship\nĐiều kiện: Test 4 tuần, online HCM, giới hạn 1.200 chai\nĐối tượng: 22-34 tuổi, dân văn phòng, Q1 Q3 Bình Thạnh\nKênh: Facebook, Instagram, ShopeeFood, GrabFood\nKPI: CTR 2,8%, CPL 18.000đ, ROAS 2,5",
+    "id": 73
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết caption Facebook cho chuỗi cà phê tầm trung với giọng chuyên nghiệp như agency, Facebook-native, rõ hook và CTA. Bài dài 120-200 từ, đoạn gọn, bám sát seed, không hype rỗng, không bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook ra mắt Cold Brew Cam Yuzu của Urban Brew — thử vị mới, deal tuần đầu.",
+    "seed": "Thương hiệu: Urban Brew — chuỗi cà phê, 12 cửa hàng TP.HCM\nSản phẩm: Cold Brew Cam Yuzu — ly 500ml, cà phê trái cây\nGiá: 49.000đ (gốc 59.000đ, -17%), freeship 2km\nĐiều kiện: 7 ngày đầu, GrabFood/inbox, giới hạn 100 ly/ngày\nĐối tượng: 22-32 tuổi, dân văn phòng, Q1, Q3, Phú Nhuận\nKênh: Facebook Page, Messenger, GrabFood\nKPI: CTR ≥ 2,8%, GMV ≥ 60 triệu",
+    "id": 74
+  },
+  {
+    "instruction": "Bạn là copywriter marketing F&B người Việt, viết caption Facebook ngắn 50-100 từ, giọng chuyên nghiệp như agency, Facebook-native, rõ lợi ích và CTA cụ thể. Bám sát seed, không bịa claim, không hype rỗng.",
+    "title": "Viết caption Facebook cho Cấp Đông Nhà Làm — Combo há cảo đông lạnh giảm 20% cho dân văn phòng.",
+    "seed": "Thương hiệu: Cấp Đông Nhà Làm — đồ đông lạnh, 8 điểm bán Hà Nội\nSản phẩm: Combo Há Cảo Tôm Thịt — 30 viên, 600g\nGiá: 119.000đ (gốc 149.000đ, -20%), freeship 4km\nĐiều kiện: 15-30/6, đặt qua inbox, giới hạn 40 combo/ngày\nĐối tượng: 23-38 tuổi, dân văn phòng, Cầu Giấy & Thanh Xuân\nKênh: Facebook Page, Messenger, ShopeeFood\nKPI: CTR ≥ 2,8%, GMV ≥ 25 triệu",
+    "id": 75
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng founder startup F&B, viết Facebook-native súc tích, rõ lợi ích và ưu đãi. Bám sát seed, đoạn ngắn, CTA cụ thể, không hype rỗng, không bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook cho launch Cold Brew Blend của Lửa Coffee — thử vị specialty mới, deal mở bán -20%.",
+    "seed": "Thương hiệu: Lửa Coffee — specialty cafe, 3 cửa hàng TP.HCM\nSản phẩm: Cold Brew Blend 500ml, arabica Đà Lạt, rang medium\nGiá: 79.000đ (gốc 99.000đ, -20%), freeship 2km\nĐiều kiện: 5 ngày, đặt qua TikTok Shop, giới hạn 80 chai/ngày\nĐối tượng: 22-34 tuổi, dân văn phòng, Q1, Q3, Bình Thạnh\nKênh: Facebook Page, TikTok Ads, TikTok Shop\nKPI: CTR ≥ 2,5%, ROAS ≥ 3",
+    "id": 76
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết nội dung Facebook-native cho ngành F&B với giọng thân thiện như freelancer, câu ngắn gọn, dễ chốt đơn. Bám sát seed, có hook rõ, lợi ích cụ thể, CTA trực diện, không hype rỗng và không bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook cho LaFresh Tea RTD — combo trà chai giờ xế giảm 20% kéo đơn app.",
+    "seed": "Thương hiệu: LaFresh Tea RTD — đồ uống chai, 12 điểm bán, TP.HCM\nSản phẩm: Combo 3 trà ô long đào chai 450ml\nGiá: 69.000đ (gốc 86.000đ, -20%), freeship 2km\nĐiều kiện: 14h-17h, đặt app, giới hạn 100 combo/ngày\nĐối tượng: 22-34 tuổi, dân văn phòng, Q1-Q3-Phú Nhuận\nKênh: App brand, Facebook Page, Zalo OA\nKPI: CTR push ≥ 4%, GMV app ≥ 25 triệu",
+    "id": 77
+  },
+  {
+    "instruction": "Bạn là copywriter marketing F&B người Việt, giọng agency chuyên nghiệp, viết Facebook-native dài 250-400 từ, cấu trúc rõ hook-lợi ích-CTA. Bám sát seed, ưu tiên số liệu vận hành và hiệu quả media, không bịa claim ngoài dữ liệu, CTA cụ thể cho chuyển đổi.",
+    "title": "Viết caption Facebook cho sale Shopee 11.11 của An Nhiên Foods — combo đồ ăn đông lạnh giảm sâu, chốt đơn nhanh Black Friday.",
+    "seed": "Thương hiệu: An Nhiên Foods — đồ ăn đông lạnh, 12 SKU, HN & HCM\nSản phẩm: Combo 6 món tiện lợi, 1,8kg, 3-4 bữa\nGiá: 219.000đ (gốc 329.000đ, -33%), freeship đơn từ 299.000đ\nĐiều kiện: 8-11/11, Shopee Mall, giới hạn 300 combo/ngày\nĐối tượng: 23-38 tuổi, NVVP, mẹ trẻ, nội thành HN/HCM\nKênh: Facebook Page, Shopee Mall, Zalo OA, remarketing Meta\nKPI: CTR >=2,8%, ROAS >=4, GMV >=180 triệu",
+    "id": 78
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng founder startup F&B, viết Facebook-native 250-400 từ, đoạn ngắn, rõ offer, CTA cụ thể. Bám sát seed, ưu tiên insight đi trải nghiệm cùng reviewer, có KPI, ngân sách và đo lường thực chiến, KHÔNG hype rỗng hay bịa claim ngoài seed.",
+    "title": "Viết caption Facebook mời food reviewer dự sự kiện trải nghiệm Pizza Nova — ra mắt Pizza 4 Vị Nướng Đá với suất tasting giới hạn.",
+    "seed": "Thương hiệu: Pizza Nova — chuỗi pizza, 12 cửa hàng TP.HCM\nSản phẩm: Pizza 4 Vị Nướng Đá 30cm, 8 miếng\nGiá: vé 99.000đ (gốc 149.000đ, -34%), tặng 1 nước\nĐiều kiện: 19-21/7, đăng ký inbox, 40 suất/ngày, check-in tại store\nĐối tượng: 20-34 tuổi, dân văn phòng, reviewer micro, Q1-Q7\nKênh: Facebook Page, Event, Messenger, TikTok, Zalo OA\nKPI: CPL ≤ 25.000đ, 120 lead, ROAS ≥ 2.5; ngân sách 6 triệu",
+    "id": 79
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết Facebook-native ngắn gọn và rõ insight khách hàng. Chỉ bám seed, ưu tiên pain point, ngữ điệu gần gũi, không hype rỗng.",
+    "title": "Viết post Facebook nghiên cứu insight cho Sweet Crumb Bakery — dân văn phòng cần box bánh tiện mang đi.",
+    "seed": "Thương hiệu: Sweet Crumb Bakery, 3 tiệm bánh ngọt tại Hà Nội\nSản phẩm: Office Sweet Box, 4 bánh mini 280g\nGiá: 89.000đ (gốc 119.000đ, -25%)\nĐiều kiện: 7-10h T2-T6, đặt qua inbox, giới hạn 40 box/ngày\nĐối tượng: 22-34, dân văn phòng, Cầu Giấy-Ba Đình\nKênh: Facebook Page, Messenger, ShopeeFood\nKPI: CTR ≥ 2,8%, CPL ≤ 18.000đ",
+    "id": 80
+  },
+  {
+    "instruction": "Bạn là copywriter marketing F&B người Việt, viết ngắn gọn như freelancer thân thiện, câu chữ tự nhiên, rõ lợi ích. Bám sát seed, Facebook-native, không hype rỗng, không bịa claim ngoài dữ liệu.",
+    "title": "Viết bài Facebook cho Xiên Nướng Góc Phố — combo ăn vặt 39.000đ, chốt đơn giờ tan ca.",
+    "seed": "Thương hiệu: Xiên Nướng Góc Phố — đồ ăn vặt, 3 điểm bán Hà Nội\nSản phẩm: Combo 5 xiên nướng 450g, sốt cay ngọt\nGiá: 39.000đ (gốc 55.000đ, -29%), freeship 2km\nĐiều kiện: 16h-21h, GrabFood, ShopeeFood, giới hạn 80 combo/ngày\nĐối tượng: 18-30 tuổi, sinh viên, dân văn phòng Cầu Giấy\nKênh: Facebook Page, GrabFood, ShopeeFood\nKPI: CTR ≥ 2,8%, GMV/ngày ≥ 4 triệu",
+    "id": 81
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt cho ngành F&B, viết Facebook-native theo giọng agency chuyên nghiệp, rõ insight và định vị thương hiệu. Output 120-200 từ, đoạn ngắn, có hook, thông điệp cốt lõi và CTA cụ thể; không dùng hype rỗng, không bịa claim ngoài seed.",
+    "title": "Viết post Facebook chiến lược thương hiệu cho Atelier 9 Fine Dining — định vị trải nghiệm tasting menu đẳng cấp giữa lòng TP.HCM.",
+    "seed": "Thương hiệu: Atelier 9 Fine Dining, 1 nhà hàng, Q1 TP.HCM\nSản phẩm: Tasting Menu 8 món, pairing rượu tuỳ chọn\nGiá: 1,89 triệu/người, chưa gồm pairing\nĐiều kiện: Dinner 18:00-22:00, đặt bàn trước 24h\nĐối tượng: 28-45, quản lý/chủ DN, Q1-Q3-Phú Nhuận\nKênh: Facebook, Instagram, Zalo OA, hotline\nKPI: CTR >=2,5%, booking rate >=8%",
+    "id": 82
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết Facebook-native cho bài mời food reviewer tham gia sự kiện trải nghiệm trà sữa. Output 120-200 từ, đoạn ngắn, hook rõ, CTA cụ thể, bám sát seed và không bịa claim ngoài dữ liệu.",
+    "title": "Viết post Facebook mời reviewer tham dự buổi tasting của Lala Tea — thử menu mới, check-in nhận quà.",
+    "seed": "Thương hiệu: Lala Tea — trà sữa, 8 cửa hàng, TP.HCM\nSản phẩm: menu trái cây sữa 4 vị, ly 700ml\nGiá: vé 0đ, tặng 1 ly + voucher 30.000đ\nĐiều kiện: 18-21h 28/06, Q3, đăng ký inbox, 40 suất\nĐối tượng: 18-30 tuổi, reviewer mới, creator F&B TP.HCM\nKênh: Facebook Page, Messenger, TikTok\nKPI: 25 check-in, 12 bài review, reach 20.000",
+    "id": 83
+  },
+  {
+    "instruction": "Bạn là copywriter marketing F&B người Việt, giọng director marketing dày dạn, viết Facebook-native ngắn gọn 50-100 từ, ưu tiên insight và tính chuyển đổi. Bám sát seed, nêu rõ hook KOL/KOC, CTA cụ thể, không hype rỗng, không bịa claim ngoài dữ liệu.",
+    "title": "Viết post Facebook chiến lược KOL/KOC cho Green Sip Smoothie — đẩy trial combo detox 3 chai.",
+    "seed": "Thương hiệu: Green Sip — juice & smoothie, 8 kiosk tại TP.HCM\nSản phẩm: Combo Detox 3 chai 300ml, ép lạnh, ít đường\nGiá: 99.000đ (gốc 129.000đ, -23%), freeship 2km\nĐiều kiện: 7 ngày, KOC review + mã cá nhân, giới hạn 200 combo\nĐối tượng: 22-34 tuổi, dân văn phòng, Q1-Q3-Phú Nhuận\nKênh: Facebook Page, Reels, KOC foodie, GrabFood\nKPI: CTR ≥ 2,8%, CPL ≤ 18.000đ, ROAS ≥ 3",
+    "id": 84
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng founder startup F&B, viết kịch bản video TikTok theo phong cách Facebook-native: câu ngắn, insight rõ, hook sớm, CTA cụ thể. Bám sát seed, không bịa claim hay số liệu ngoài dữ liệu đã cho, độ dài đầu ra 120-200 từ.",
+    "title": "Viết kịch bản video TikTok cho Sữa chua uống YomiGo Probiotic — hook giải nhiệt, nhẹ bụng mùa nóng.",
+    "seed": "Thương hiệu: YomiGo — sữa chua uống, 12 điểm bán Hà Nội\nSản phẩm: YomiGo Probiotic 180ml, ít đường, 3 vị dâu/xoài/nguyên bản\nGiá: 18.000đ/chai (gốc 24.000đ, -25%), freeship đơn từ 79.000đ\nĐiều kiện: 20-26/5, GrabFood & inbox, giới hạn 100 đơn/ngày\nĐối tượng: 22-34 tuổi, dân văn phòng, Cầu Giấy/Đống Đa\nKênh: TikTok, Facebook Page, GrabFood\nKPI: CTR ≥ 2,8%, ROAS ≥ 3",
+    "id": 85
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng chuyên nghiệp như agency, viết Facebook-native ngắn gọn, rõ offer, CTA cụ thể. Bám sát seed, không bịa claim, ưu tiên thông tin hỗ trợ chuyển đổi từ traffic Google Ads.",
+    "title": "Viết caption Facebook cho Mật Ong U Minh OCOP — quà biếu chuẩn vùng miền, ưu đãi mở traffic Google Ads.",
+    "seed": "Thương hiệu: Mật Ong U Minh OCOP, đặc sản Cà Mau, 3 điểm bán\nSản phẩm: Mật ong rừng U Minh chai 500ml, OCOP 4 sao\nGiá: 189.000đ (gốc 229.000đ, -17%), freeship đơn 2 chai\nĐiều kiện: 7 ngày, đặt web, HN/HCM, giới hạn 100 đơn\nĐối tượng: 28-45 tuổi, dân văn phòng, HN/HCM\nKênh: Facebook Page, Website, Zalo OA\nKPI: CPL ≤ 35.000đ, ROAS ≥ 3.5",
+    "id": 86
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt cho F&B, giọng thân thiện như freelancer, viết Facebook-native 250-400 từ, đoạn ngắn, hook rõ, CTA cụ thể. Bám sát seed, không bịa claim ngoài dữ liệu; ưu tiên ngôn ngữ bán hàng thực chiến, nêu ưu đãi, deadline và động lực chốt đơn.",
+    "title": "Viết caption Facebook cho chiến dịch Trung Thu của An Nhiên Chay — hộp bánh thuần chay quà tặng nhẹ lòng, dễ chốt đơn sớm.",
+    "seed": "Thương hiệu: An Nhiên Chay — nhà hàng chay, 3 CN, TP.HCM\nSản phẩm: Hộp bánh Trung Thu thuần chay 4 bánh 480g, trà sen 50g\nGiá: 329.000đ (gốc 389.000đ, -15%), freeship 5km\nĐiều kiện: 15/8-14/9, đặt inbox/Zalo, giới hạn 80 hộp/ngày\nĐối tượng: 24-40 tuổi, NVVP/gia đình trẻ, Q1,3,7, Phú Nhuận\nKênh: Facebook Page, Messenger, Zalo OA, ShopeeFood\nKPI: CTR ≥3,5%; ROAS ≥4; ngân sách ads 18 triệu",
+    "id": 87
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết Facebook-native giọng founder startup F&B: thẳng, thực chiến, có số liệu và luận điểm mở rộng nhượng quyền rõ ràng. Viết bài 250-400 từ, đoạn ngắn, CTA cụ thể, bám sát seed, không hype rỗng, không bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook tuyển đối tác nhượng quyền Yogurto Lab — mô hình sữa chua ít vốn, hoàn vốn nhanh.",
+    "seed": "Thương hiệu: Yogurto Lab — sữa chua, 12 kiosk HN+HCM\nSản phẩm: Nhượng quyền kiosk sữa chua 12-18m2, 18 SKU\nGiá: phí nhượng quyền 120 triệu, setup từ 280 triệu\nĐiều kiện: mở Q3/2026, ưu tiên mặt bằng góc, chốt 10 suất\nĐối tượng: 28-45 tuổi, chủ shop/cặp vợ chồng, HN HCM ĐN\nKênh: Facebook, Zalo OA, landing page, hotline\nKPI: CPL ≤ 180k, 60 lead/tháng, ROAS lead ≥ 3",
+    "id": 88
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng founder startup F&B, viết Facebook-native ngắn gọn, rõ offer, CTA thẳng. Chỉ bám seed, không hype rỗng, không bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook cho landing page khuyến mãi của Phở Nhanh 24 — combo phở giờ trưa giảm 30%.",
+    "seed": "Thương hiệu: Phở Nhanh 24 — chuỗi bún phở, 8 cửa hàng Hà Nội\nSản phẩm: Combo Phở Bò + trà chanh 700ml\nGiá: 59.000đ (gốc 85.000đ, -30%)\nĐiều kiện: 11h-14h, đặt landing page, 1 combo/đơn\nĐối tượng: 22-35 tuổi, dân văn phòng, Cầu Giấy-Ba Đình\nKênh: Facebook Page, landing page, Zalo OA\nKPI: CTR ≥ 2,8%, CPL ≤ 12.000đ",
+    "id": 89
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết kịch bản video TikTok cho brand F&B theo kiểu social-native, ngắn gọn và dễ quay. Bám sát seed, ưu tiên hook 3 giây đầu, CTA rõ, không hype rỗng, không bịa claim ngoài dữ liệu.",
+    "title": "Viết kịch bản video TikTok cho Xiên Nướng Chị Mía — combo ăn vặt 39.000đ, chốt đơn giờ tan ca.",
+    "seed": "Thương hiệu: Xiên Nướng Chị Mía — ăn vặt street food, 3 xe, TP.HCM\nSản phẩm: Combo 5 xiên nướng + trà tắc 500ml\nGiá: 39.000đ (gốc 55.000đ, -29%), freeship 2km\nĐiều kiện: 16h-21h, GrabFood/inbox, giới hạn 80 combo/ngày\nĐối tượng: 18-28 tuổi, sinh viên, dân văn phòng, Q3-Q10\nKênh: TikTok, Facebook Page, GrabFood\nKPI: CTR ≥ 2,8%, GMV/ngày ≥ 5 triệu",
+    "id": 90
+  },
+  {
+    "instruction": "Bạn là copywriter marketing F&B người Việt, viết Facebook-native cho ngành snack đóng gói với giọng chuyên nghiệp như agency, rõ lợi ích và bám sát dữ kiện CSR. Viết đoạn ngắn mạch lạc, có hook và CTA cụ thể, không hype rỗng, không thêm claim ngoài seed.",
+    "title": "Viết caption Facebook CSR cho Bánh Gạo An Nhiên — mua snack, góp quỹ xanh cùng bao bì tái chế.",
+    "seed": "Thương hiệu: An Nhiên Snacks — bánh kẹo, 12 điểm bán, TP.HCM\nSản phẩm: Bánh Gạo Mè 180g, bao bì giấy tái chế 70%\nGiá: 32.000đ (gốc 39.000đ, -18%), không freeship\nĐiều kiện: 1-15/6, mua tại page, Shopee, giới hạn 1.000 gói\nĐối tượng: 24-38 tuổi, NVVP, Q1,Q3,Phú Nhuận\nKênh: Facebook Page, Shopee, Zalo OA\nKPI: CTR ≥ 2,8%, GMV ≥ 35 triệu",
+    "id": 91
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng thân thiện như freelancer, viết Facebook-native ngắn gọn cho bài pitch dịch vụ B2B catering. Output súc tích 50-100 từ, nêu rõ lợi ích, CTA cụ thể, không hype rỗng, không bịa claim ngoài seed.",
+    "title": "Viết caption Facebook pitch catering doanh nghiệp cho Mây Kem Studio — quầy kem mini cho sự kiện văn phòng.",
+    "seed": "Thương hiệu: Mây Kem Studio — dessert shop, 2 điểm bán, TP.HCM\nSản phẩm: Quầy kem mini catering — 4 vị, set 30 ly\nGiá: từ 1,99 triệu/set, miễn phí setup nội thành\nĐiều kiện: đặt trước 3 ngày, áp dụng T2-T6, tối đa 3 set/ngày\nĐối tượng: HR, admin, marketer 24-40 tuổi, Q1, Q3, Phú Nhuận\nKênh: Facebook Page, Zalo OA, Messenger\nKPI: CPL ≤ 60.000đ, 12 lead/tháng",
+    "id": 92
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng founder startup F&B, viết Facebook-native, thực chiến và có số liệu. Soạn bài định hướng livestream TikTok Shop dài 250-400 từ, đoạn ngắn, CTA rõ, bám sát seed, không bịa claim ngoài dữ liệu.",
+    "title": "Viết post Facebook kế hoạch livestream TikTok Shop cho Ráng Roastery — chốt đơn specialty combo mở phiên tối.",
+    "seed": "Thương hiệu: Ráng Roastery — specialty coffee, 3 điểm bán, TP.HCM\nSản phẩm: Combo Drip Bag 10 gói + Cold Brew 500ml\nGiá: 179.000đ (gốc 239.000đ, -25%), freeship 4km\nĐiều kiện: Live 20-22h T6, TikTok Shop, giới hạn 120 combo\nĐối tượng: 23-34 tuổi, dân văn phòng, Q1-Q3-Phú Nhuận\nKênh: Facebook Page, TikTok Shop, Messenger\nKPI: ROAS ≥ 3,5; GMV live ≥ 22 triệu",
+    "id": 93
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết Facebook-native giọng founder startup cho thương hiệu F&B. Output ngắn gọn 50-100 từ, nêu rõ thông điệp CSR & sustainability, CTA cụ thể, không hype rỗng, không bịa claim ngoài seed.",
+    "title": "Viết caption Facebook cho VinaVine Imports — vang nhập khẩu xanh với chương trình hoàn chai giảm rác.",
+    "seed": "Thương hiệu: VinaVine Imports — vang nhập khẩu, 3 showroom TP.HCM\nSản phẩm: Chile Cabernet 750ml, chai thủy tinh hoàn vỏ\nGiá: 399.000đ (gốc 459.000đ, -13%), không freeship\nĐiều kiện: 1-30/6, mua tại showroom hoặc inbox, hoàn chai nhận quà\nĐối tượng: 28-45 tuổi, dân văn phòng, Q1-Q3-Phú Nhuận\nKênh: Facebook Page, Messenger, Zalo OA\nKPI: CTR ≥ 2,5%, 80 chai hoàn vỏ/tháng",
+    "id": 94
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng founder startup F&B, viết Facebook-native sắc gọn, ưu tiên chuyển đổi và retention. Dựa đúng seed để viết bài 250-400 từ, có hook, lợi ích rõ, CTA cụ thể, nêu KPI/đo lường/ngân sách nếu có, KHÔNG bịa claim ngoài dữ liệu.",
+    "title": "Viết caption Facebook cho app push notification của Bếp Than BBQ — combo lẩu nướng 2 người giảm sâu giờ thấp điểm.",
+    "seed": "Thương hiệu: Bếp Than BBQ — chuỗi lẩu nướng, 12 chi nhánh HN\nSản phẩm: Combo 2 người gồm 1 lẩu + 1 thịt nướng + 2 nước\nGiá: 299.000đ (gốc 399.000đ, -25%), không freeship\nĐiều kiện: 14h-17h T2-T6, đặt app, 1 mã/tk, 200 suất/ngày\nĐối tượng: 23-35 tuổi, dân văn phòng, Cầu Giấy-Ba Đình-Đống Đa\nKênh: App push, Facebook Page, Zalo OA\nKPI: CR app>=4%, CAC<=35.000đ, GMV>=120 triệu/tuần",
+    "id": 95
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết theo giọng founder startup F&B: sắc gọn, thực chiến, Facebook-native, ưu tiên lợi ích rõ và CTA cụ thể. Chỉ dùng dữ kiện trong seed, không bịa claim, câu ngắn dễ đọc, phù hợp triển khai push notification app và tối ưu chuyển đổi.",
+    "title": "Viết caption Facebook cho LUMIÈRE Dining — tasting menu 6 món, hook đặt sớm nhận ưu đãi giữa tuần.",
+    "seed": "Thương hiệu: LUMIÈRE Dining — fine-dining, 1 nhà hàng, Q1 TP.HCM\nSản phẩm: Tasting Menu 6 món, 2 khách, set tối 90 phút\nGiá: 1,49 triệu (gốc 1,8 triệu, -17%), tặng mocktail 2 ly\nĐiều kiện: T2-T5, đặt app, 17h-21h, giới hạn 20 set/đêm\nĐối tượng: 25-40 tuổi, dân văn phòng, founder, Q1-Q3-Phú Nhuận\nKênh: App brand, Facebook Page, Instagram, Zalo OA\nKPI: CTR push ≥8%, CVR app ≥4%, ROAS ≥3.5",
+    "id": 96
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, giọng chuyên nghiệp như agency F&B, viết Facebook-native theo format brief rõ mục tiêu, insight, deliverables và đo lường. Bám sát seed, nêu KPI/budget/tracking cụ thể, câu ngắn gọn, không hype rỗng, không bịa claim ngoài dữ liệu.",
+    "title": "Viết post Facebook dạng packaging design brief cho Cơm Tấm 1989 — làm mới hộp cơm văn phòng để tăng AOV giờ trưa.",
+    "seed": "Thương hiệu: Cơm Tấm 1989 — cơm tấm, 8 điểm bán TP.HCM\nSản phẩm: Combo cơm sườn bì chả 1 phần 650g, hộp mang đi mới\nGiá: 59.000đ (gốc 69.000đ, -14%), freeship 2km\nĐiều kiện: 11h-13h T2-T6, GrabFood/inbox, giới hạn 80 combo/ngày\nĐối tượng: 23-35 tuổi, dân văn phòng, Q1,Q3,Phú Nhuận\nKênh: Facebook Page, Messenger, GrabFood, Zalo OA\nKPI: CTR ≥ 2,8%, AOV trưa ≥ 72.000đ, ROAS ≥ 3,5",
+    "id": 97
+  },
+  {
+    "instruction": "Bạn là copywriter marketing F&B người Việt, giọng director marketing dày dạn: sắc gọn, Facebook-native, ưu tiên lợi ích và CTA rõ. Viết caption 50-100 từ, đoạn ngắn, không hype rỗng, không bịa claim ngoài seed.",
+    "title": "Viết caption Facebook cho Urban Roast Coffee — combo sáng 2 ly tiết kiệm cho dân văn phòng.",
+    "seed": "Thương hiệu: Urban Roast Coffee, chuỗi cà phê 12 cửa hàng TP.HCM\nSản phẩm: Morning Duo Combo — 2 ly 500ml, chọn cà phê hoặc trà sữa\nGiá: 79.000đ (gốc 98.000đ, -19%), freeship 2km\nĐiều kiện: 6h30-10h30 T2-T6, GrabFood, giới hạn 80 combo/ngày\nĐối tượng: 23-35 tuổi, dân văn phòng, Q1-Q3-Phú Nhuận\nKênh: Facebook Page, GrabFood, Messenger\nKPI: CTR ≥ 2,8%, ROAS ≥ 4",
+    "id": 98
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt cho ngành grocery, giọng agency chuyên nghiệp, Facebook-native, viết bài 250-400 từ với hook rõ, cấu trúc logic, CTA cụ thể. Chỉ dùng dữ kiện trong seed, lồng ghép KPI, ngân sách, đo lường thực chiến, không hype rỗng, không bịa claim.",
+    "title": "Viết caption Facebook cho MiniGo Mart dịp Shopee 11.11 — combo nhu yếu phẩm giảm sâu, chốt đơn nhanh.",
+    "seed": "Thương hiệu: MiniGo Mart — siêu thị mini, 12 cửa hàng TP.HCM\nSản phẩm: Combo 11.11 — 10 món nhu yếu phẩm, gói 3,5kg\nGiá: 199.000đ (gốc 279.000đ, -29%), freeship 2km\nĐiều kiện: 9-11/11, ShopeeFood+inbox, giới hạn 300 combo\nĐối tượng: 24-40 tuổi, nhân viên VP, Q1-Q7, Bình Thạnh\nKênh: Facebook Page, Messenger, ShopeeFood, Zalo OA\nKPI: CTR 3,5%, CPL 18.000đ, ROAS 4,2; ads 18 triệu",
+    "id": 99
+  },
+  {
+    "instruction": "Bạn là copywriter marketing người Việt, viết Facebook-native cho nhà hàng fine-dining với giọng founder startup: tự tin, sắc gọn, thực chiến, không hype rỗng. Khi triển khai từ seed, viết bài dài 250-400 từ, có hook mạnh, nêu rõ ưu đãi, urgency, CTA cụ thể và bám sát dữ liệu, không bịa claim ngoài seed.",
+    "title": "Viết caption Facebook cho Black Friday/11.11 của Maison de Noir — set fine-dining 6 món giảm sâu, chốt bàn nhanh.",
+    "seed": "Thương hiệu: Maison de Noir — fine-dining, 2 chi nhánh, Q1 & Thảo Điền\nSản phẩm: Set 6 món Black Friday cho 2 khách, kèm 2 mocktail\nGiá: 1,19 triệu (gốc 1,69 triệu, -30%), không freeship\nĐiều kiện: 8-11/11, đặt cọc qua inbox, tối đa 40 set/ngày\nĐối tượng: 25-40 tuổi, dân văn phòng, cặp đôi, Q1 Q2 Q3 Phú Nhuận\nKênh: Facebook Page, Messenger, Zalo OA, ShopeeFood Dine Out\nKPI: ROAS ≥ 4,5; CPL ≤ 28.000đ; ngân sách ads 18 triệu",
+    "id": 100
   }
 ]
