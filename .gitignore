@@ -67,3 +67,4 @@ desktop.ini
 *.swo
 
 .claude
+train/unsloth_compiled_cache/

@@ -1,3 +1,25 @@
+# LM Studio — Import fine-tuned model
+
+1. Mở LM Studio → tab **"My Models"** (icon folder bên trái)
+2. Click **"Import model files from disk"**
+3. Chọn file: `outputs/Qwen-Qwen3.5-4B/model-q4_k_m.gguf`
+4. Sau khi import xong → sang tab **"Chat"** → chọn model vừa import từ dropdown
+5. Vào **"Model Configuration"** (icon gear) → set:
+   - **Context length**: `4096`
+   - **Prompt template**: `ChatML` (LM Studio tự detect từ tokenizer_config.json, nhưng chọn tay nếu cần)
+   - **System prompt**:
+     ```
+     Bạn là copywriter marketing người Việt, giọng chuyên nghiệp kiểu agency,
+     viết Facebook-native, mạch lạc, súc tích, bám đúng dữ kiện seed.
+     Output 120-200 từ, có hook, luận điểm thương hiệu rõ, CTA cụ thể, KHÔNG bịa claim ngoài seed.
+     ```
+
+> **Local server** (cho app / API call):
+> Tab **"Developer"** → bật **"Start Server"** → endpoint `http://localhost:1234/v1`
+> Compatible OpenAI API, dùng model name `local-model`.
+
+---
+
 # Copy file to TMA Server
 scp -r d:\Github\mcs-train-content-model\dataset dc34rpa@192.168.92.26:/home/dc34rpa/nathan/
 2026ai@BU3
